@@ -404,6 +404,100 @@ export default function Home() {
             </div>
           </div>
         </section>
+      {/* Values */}
+        <section
+          className='py-24 md:pb-32 bg-white'
+          style={{
+            backgroundImage: 'url("svg/pattern-white.svg")',
+            backgroundPosition: 'center',
+          }}
+          id='services'
+        >
+            <div className='container px-4 mx-auto'>
+              <div className='max-w-4xl mb-12 text-left'>
+                <span className='inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-mto-orange font-medium uppercase rounded-full shadow-sm'>
+                  Values
+                </span>
+                <h1 className='mb-4 text-3xl md:text-4xl leading-tight font-bold tracking-tighter'>
+                  Guiding Principles
+                </h1>
+                <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
+                At Mighty Orchid Services, our values define us. Care, Respect, Accountability and Collaboration are at the core of all we do. They guide our commitment to the well-being and success of every individual we support, driving us to create positive impact every day.</p>
+              </div>
+            <div className='flex flex-wrap -mx-4 align'>
+              <div className='w-full md:w-1/2 lg:w-1/4 px-4'>
+                <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
+                  <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
+                    <img
+                      width={100}
+                      height={100}
+                      src="/values/care.webp"
+                      />
+                  </div>
+                  <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
+                    Care
+                  </h3>
+                  <p className='text-coolGray-500 font-medium'>
+                  {`At MTOS, Care is central to our mission. We prioritize empathy and kindness, ensuring each individual's well-being is our top priority. From tailored support plans to attentive staff, we create a nurturing environment where everyone feels valued and supported on their journey to success.`}
+                  </p>
+                </div>
+              </div>
+              <div className='w-full md:w-1/2 lg:w-1/4 px-4'>
+                <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
+                  <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
+                    <img
+                      width={100}
+                      height={100}
+                      src="/values/respect.webp"
+                      className=""
+                      />
+                  </div>
+                  <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
+                    Respect
+                  </h3>
+                  <p className='text-coolGray-500 font-medium pt-4'>
+                    At MTOS, Respect is paramount. We prioritize listening, understanding, and honoring the rights and choices of every individual we care for. By fostering inclusivity and valuing diversity, we create a culture of mutual respect within our community.
+                  </p>
+                </div>
+              </div>
+              <div className='w-full md:w-1/2 lg:w-1/4 px-4'>
+                <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
+                  <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
+                    <img
+                      width={110}
+                      height={110}
+                      src='/values/Accountability.webp'
+                      />
+                    
+                  </div>
+                  <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
+                    Accountability
+                  </h3>
+                  <p className='text-coolGray-500 font-medium'>
+                    At MTOS, Accountability is key. We take ownership, prioritize transparency, and strive for excellence in all we do. Through clear communication and proactive problem-solving, we guarantee reliability and trustworthiness in every interaction.
+                  </p>
+                </div>
+              </div>
+              <div className='w-full md:w-1/2 lg:w-1/4 px-4'>
+                <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
+                  <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
+                    <img
+                      width={110}
+                      height={110}
+                      src='/values/Collaboration.webp'
+                      />
+                  </div>
+                  <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
+                    Collaboration
+                  </h3>
+                  <p className='text-coolGray-500 font-medium'>
+                    At MTOS, Collaboration is key. We believe in teamwork, open communication, and leveraging diverse expertise to achieve success. By working together, we drive innovation and maximize our impact for positive change.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       {/* Parralax  */}
         <section
           className='pt-24 bg-white bg-fixed'
@@ -420,7 +514,7 @@ export default function Home() {
         </section>
       {/* Testimonials */}
         <section
-          className='py-24 md:pb-28 bg-white hidden'
+          className='py-24 md:pb-28 bg-white'
           style={{
             backgroundImage: 'url("svg/pattern-white.svg")',
             backgroundPosition: 'center',
@@ -432,45 +526,50 @@ export default function Home() {
                 Testimonials
               </span>
               <h2 className='mb-4 text-4xl md:text-5xl leading-tight font-semibold tracking-tighter'>
-                Testimonials from MTOS participants 
+                Voices of Experience
               </h2>
               <p className='text-xl font-medium text-coolGray-500'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                {`Discover what our participants have to say about their journey with us. Through their stories, you'll gain insight into the impact of our support and the transformative experiences our participants have undergone. From overcoming challenges to achieving milestones, these testimonials showcase the real-life successes of individuals within our community.`}
               </p>
             </div>
             <div className='flex flex-wrap -mx-4'>
               <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
-                  <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <h3 className='pb-14 mb-auto text-lg md:text-xl font-medium'>
+                  {`"We are really happy with Mighty Orchid Services. <br/><br/>Great to have experienced and most importantly HAPPY staff on our daughter’s care team - when the staff are happy and supported by the management you can really see the difference. Mighty Orchid have been really professional and organised with onboarding, communicating and invoicing from Day 1.<br/><br/>The staff who provide care to my daughter are reliable and fantastic at what they do!"`}
                   </h3>
                   <h4 className='mb-1 text-lg font-semibold'>
-                    John Doe
+                     - Jodie Crane
                   </h4>
                   <p className='text-lg text-coolGray-400'>
-                    CEO &amp; Founder
+                    {`Participant's Family Member`}
                   </p>
                 </div>
               </div>
               <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    {`"Mighty orchid services is like my second family, always very supportive, easy to communicate with and all together wonderful."`}
                   </h3>
-                  <h4 className='mb-1 text-lg font-semibold'>John Doe</h4>
-                  <p className='text-lg text-coolGray-400'>CTO</p>
+                  <h4 className='mb-1 text-lg font-semibold'>- Rebecca Matthews</h4>
+                  <p className='text-lg text-coolGray-400'>Participant</p>
                 </div>
               </div>
               <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
-                  <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <h3 className='pb-14 mb-auto text-lg md:text-xl font-medium'>
+                  {`"I wanted to thank you for choosing David as my Brothers Carer while I was away.
+                  <br/><br/>David was very professional at all times but also very caring and understanding, he took very good care of my Brother and
+                  house, and I am very grateful for David's help and expertise. I didn't have to worry about anything while I
+                  was away, although I did check if they
+                  were going ok.
+                  <br/><br/>I Appreciate and thank David for everything."`}
                   </h3>
-                  <h4 className='mb-1 text-lg font-semibold'>John Doe</h4>
-                  <p className='text-lg text-coolGray-400'>CPO</p>
+                  <h4 className='mb-1 text-lg font-semibold'>- Rosemary</h4>
+                  <p className='text-lg text-coolGray-400'>{`Participant's Family Member`}</p>
                 </div>
               </div>
-              <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8 lg:mb-0'>
+              <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8 lg:mb-0 hidden'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -481,7 +580,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8 md:mb-0'>
+              <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8 md:mb-0 hidden'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -492,7 +591,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className='w-full md:w-1/2 lg:w-1/3 px-4'>
+              <div className='w-full md:w-1/2 lg:w-1/3 px-4 hidden'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1167,7 +1266,7 @@ export default function Home() {
                       </h3>
                       <a
                         className='inline-block mr-8 text-mto-blue hover:text-mto-orange transition duration-150'
-                        href='#'
+                        href='https://www.facebook.com/profile.php?id=61557284220147'
                       >
                         <svg
                           width={10}
@@ -1185,7 +1284,7 @@ export default function Home() {
                         </svg>
                       </a>
                       <a
-                        className='inline-block mr-8 text-mto-blue hover:text-mto-orange transition duration-150'
+                        className=' hidden inline-block mr-8 text-mto-blue hover:text-mto-orange transition duration-150'
                         href='#'
                       >
                         <svg
@@ -1194,6 +1293,7 @@ export default function Home() {
                           viewBox='0 0 19 16'
                           fill='none'
                           xmlns='http://www.w3.org/2000/svg'
+                          className=" hidden"
                         >
                           <path
                             fillRule='evenodd'
@@ -1205,7 +1305,7 @@ export default function Home() {
                       </a>
                       <a
                         className='inline-block mr-8 text-mto-blue hover:text-mto-orange transition duration-150'
-                        href='#'
+                        href='https://www.facebook.com/profile.php?id=61557284220147'
                       >
                         <svg
                           width={20}
@@ -1240,7 +1340,7 @@ export default function Home() {
                       </a>
                       <a
                         className='inline-block text-mto-blue hover:text-mto-orange transition duration-150'
-                        href='#'
+                        href='https://www.facebook.com/profile.php?id=61557284220147'
                       >
                         <svg
                           width={18}
@@ -1423,7 +1523,7 @@ export default function Home() {
               <div className='w-full md:w-1/2 xl:w-1/3 px-4 mb-8 md:mb-0'>
                 <div className='md:max-w-xs'>
                   <h3 className='mb-6 text-xl text-coolGray-900 font-bold'>
-                  How is My NDIS Plan Reviewed and Updated??
+                  How is My NDIS Plan Reviewed and Updated?
                   </h3>
                   <p className='text-coolGray-500 font-medium'>
                   Your NDIS plan is typically reviewed annually by the NDIA. During the review, you can discuss your current supports, the progress towards your goals, and any changes in your needs. Based on this, your plan can be adjusted and updated to ensure it continues to meet your requirements effectively. You can also request a review at any time if there are significant changes in your circumstances. 
@@ -1542,9 +1642,18 @@ export default function Home() {
           </div>
           <div className='border-b border-coolGray-100' />
           <div className='container px-4 mx-auto'>
-            <p className='py-10 md:pb-20 text-lg md:text-xl text-coolGray-400 font-medium text-center'>
+            <p className='py-10 md:pb-10 text-lg md:text-xl text-coolGray-400 font-medium text-center'>
                Mighty Orchid Services Pty Ltd.
             </p>
+          </div>
+          <div className='container px-4 mx-auto'>
+            <p className=' text-lg md:text-xl text-coolGray-400 font-medium text-center'>
+               A proud member of:
+            </p>
+          </div>
+          <div className=' flex justify-center px-4 mx-auto'>
+            <a href="https://kdcci.com.au/"><img className="w-72 p-5 mr-40 " src="other-assets/KDCCI.jpg"></img></a>
+            <a href="https://www.onslowcci.com.au/"><img className=" w-72 p-5 mt-10" src="other-assets/Occi.svg"></img></a>
           </div>
         </section>
       </>
