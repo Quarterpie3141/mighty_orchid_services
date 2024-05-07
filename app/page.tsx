@@ -431,7 +431,7 @@ export default function Home() {
                     <img
                       width={100}
                       height={100}
-                      src="/values/care.webp"
+                      src="/values/Care.webp"
                       />
                   </div>
                   <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
@@ -448,7 +448,7 @@ export default function Home() {
                     <img
                       width={100}
                       height={100}
-                      src="/values/respect.webp"
+                      src="/values/Respect.webp"
                       className=""
                       />
                   </div>
@@ -536,7 +536,7 @@ export default function Home() {
               <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-lg md:text-xl font-medium'>
-                  {`"We are really happy with Mighty Orchid Services. <br/><br/>Great to have experienced and most importantly HAPPY staff on our daughter’s care team - when the staff are happy and supported by the management you can really see the difference. Mighty Orchid have been really professional and organised with onboarding, communicating and invoicing from Day 1.<br/><br/>The staff who provide care to my daughter are reliable and fantastic at what they do!"`}
+                  {`"We are really happy with Mighty Orchid Services.`}<br/><br/>{`Great to have experienced and most importantly HAPPY staff on our daughter’s care team - when the staff are happy and supported by the management you can really see the difference. Mighty Orchid have been really professional and organised with onboarding, communicating and invoicing from Day 1.`}<br/><br/>{`The staff who provide care to my daughter are reliable and fantastic at what they do!"`}
                   </h3>
                   <h4 className='mb-1 text-lg font-semibold'>
                      - Jodie Crane
@@ -559,11 +559,11 @@ export default function Home() {
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-lg md:text-xl font-medium'>
                   {`"I wanted to thank you for choosing David as my Brothers Carer while I was away.
-                  <br/><br/>David was very professional at all times but also very caring and understanding, he took very good care of my Brother and
+                  `}<br/><br/>{`David was very professional at all times but also very caring and understanding, he took very good care of my Brother and
                   house, and I am very grateful for David's help and expertise. I didn't have to worry about anything while I
                   was away, although I did check if they
-                  were going ok.
-                  <br/><br/>I Appreciate and thank David for everything."`}
+                  were going ok.`}
+                  <br/><br/>{`I Appreciate and thank David for everything."`}
                   </h3>
                   <h4 className='mb-1 text-lg font-semibold'>- Rosemary</h4>
                   <p className='text-lg text-coolGray-400'>{`Participant's Family Member`}</p>
