@@ -1653,7 +1653,7 @@ export default function Home() {
           </div>
           <div className=' flex justify-center px-4 mx-auto'>
             <a href="https://kdcci.com.au/"><img className="w-72 p-5 mr-40 " src="other-assets/KDCCI.jpg"></img></a>
-            <a href="https://www.onslowcci.com.au/"><img className=" w-72 p-5 mt-10" src="other-assets/Occi.svg"></img></a>
+            <a href="https://www.onslowcci.com.au/"><img className=" w-72 p-5 mt-10" src="other-assets/OCCI.svg"></img></a>
           </div>
         </section>
       </>
