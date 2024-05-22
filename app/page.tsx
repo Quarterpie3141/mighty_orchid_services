@@ -29,6 +29,7 @@ export default function Home() {
     compact: { height: '3.5rem' }, 
     expanded: { height: '7rem' }  
   };
+  const valuePath = 'values-blue';
   const collage_images =[
     <img key={'0'} className='relative rounded-3xl h-auto' src='https://i.imgur.com/TQ8WpCy.png' alt=''/>,
     <img key={'1'} className='relative rounded-3xl h-auto' src='https://i.imgur.com/13j0svE.png' alt=''/>,
@@ -178,7 +179,7 @@ export default function Home() {
                   <li className='mr-12'>
                     <a
                       className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='#services'
+                      href='/#services'
                     >
                       Our Services
                     </a>
@@ -186,7 +187,7 @@ export default function Home() {
                   <li className='mr-12'>
                     <a
                       className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='#Team'
+                      href='/#values'
                     >
                       About us
                     </a>
@@ -202,7 +203,7 @@ export default function Home() {
                   <li className='mr-12'>
                     <a
                       className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='#'
+                      href='/careers'
                     >
                       Careers
                     </a>
@@ -210,7 +211,7 @@ export default function Home() {
                   <li>
                     <a
                       className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='#FAQ'
+                      href='/#FAQ'
                     >
                       FAQ
                     </a>
@@ -411,7 +412,7 @@ export default function Home() {
             backgroundImage: 'url("svg/pattern-white.svg")',
             backgroundPosition: 'center',
           }}
-          id='services'
+          id='values'
         >
             <div className='container px-4 mx-auto'>
               <div className='max-w-4xl mb-12 text-left'>
@@ -429,9 +430,9 @@ export default function Home() {
                 <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
                   <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
                     <img
-                      width={100}
-                      height={100}
-                      src="/values/Care.webp"
+                      width={120}
+                      height={120}
+                      src={`/${valuePath}/Care.png`}
                       />
                   </div>
                   <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
@@ -446,9 +447,9 @@ export default function Home() {
                 <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
                   <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
                     <img
-                      width={100}
-                      height={100}
-                      src="/values/Respect.webp"
+                      width={120}
+                      height={120}
+                      src={`/${valuePath}/Respect.png`}
                       className=""
                       />
                   </div>
@@ -464,9 +465,9 @@ export default function Home() {
                 <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
                   <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
                     <img
-                      width={110}
-                      height={110}
-                      src='/values/Accountability.webp'
+                      width={130}
+                      height={130}
+                      src={`/${valuePath}/Accountability.png`}
                       />
                     
                   </div>
@@ -482,9 +483,9 @@ export default function Home() {
                 <div className='h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200'>
                   <div className='inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg'>
                     <img
-                      width={110}
-                      height={110}
-                      src='/values/Collaboration.webp'
+                      width={130}
+                      height={130}
+                      src={`/${valuePath}/Collaboration.png`}
                       />
                   </div>
                   <h3 className='mb-4 text-xl md:text-2xl leading-tight font-bold'>
@@ -1206,7 +1207,7 @@ export default function Home() {
                         Phone
                       </h3>
                       <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
-                        {`(08) 5106 7301`}
+                        {``}
                       </p>
                       <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
                         {`0433 362 261`}
@@ -1462,7 +1463,7 @@ export default function Home() {
         <section
           className='pt-24 bg-white'
           style={{
-            backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+            backgroundImage: 'url("svg/pattern-white.svg")',
             backgroundPosition: 'center',
           }}
           id='FAQ'
@@ -1569,7 +1570,7 @@ export default function Home() {
         <section
           className='bg-white'
           style={{
-            backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+            backgroundImage: 'url("svg/pattern-white.svg")',
             backgroundPosition: 'center',
           }}
         >
@@ -1584,7 +1585,7 @@ export default function Home() {
                 <div className='w-full md:w-auto p-3 md:px-6'>
                   <a
                     className='inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium'
-                    href='#services'
+                    href='/#services'
                   >
                     Our Services
                   </a>
@@ -1592,7 +1593,7 @@ export default function Home() {
                 <div className='w-full md:w-auto p-3 md:px-6'>
                   <a
                     className='inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium'
-                    href='#Team'
+                    href='/#values'
                   >
                     About us
                   </a>
@@ -1600,7 +1601,7 @@ export default function Home() {
                 <div className='w-full md:w-auto p-3 md:px-6'>
                   <a
                     className='inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium'
-                    href='#'
+                    href='/#'
                   >
                     Events
                   </a>
@@ -1608,7 +1609,7 @@ export default function Home() {
                 <div className='w-full md:w-auto p-3 md:px-6'>
                   <a
                     className='inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium'
-                    href='#'
+                    href='/careers#'
                   >
                     Careers
                   </a>
@@ -1624,7 +1625,7 @@ export default function Home() {
                 <div className='w-full md:w-auto p-3 md:px-6'>
                   <a
                     className='inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium'
-                    href='#contact-form'
+                    href='/#contact-form'
                   >
                     Contact Us
                   </a>
