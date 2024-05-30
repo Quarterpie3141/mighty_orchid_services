@@ -2,33 +2,20 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Collage from "./components/Collage";
-import Head from "next/head";
+import Header from "./components/Header";
+
 import dynamic from "next/dynamic";
+
 //const ReCaptcha = dynamic(() => import('./components/Captcha'), {
 //  ssr: false, 
 //});
 declare const grecaptcha: any;
 
 export default function Home() {
-  const [navVis, setNavVis] = useState(false)
-  const variants = {
-    expanded: {
-      backdropFilter: 'blur(0px)',
-      backgroundColor: 'rgba(24,43,85,0)',
-      padding: '1.5rem'
-    },
-    compact: {
-      backdropFilter: 'blur(8px)',
-      backgroundColor: 'rgba(24,43,85,0.9)',
-      padding:'0.5rem'
-    }
-  };
+
   const [animate, setAnimate] = useState(false);
   const [success, setSuccess] = useState(false);
-  const imageVariants = {
-    compact: { height: '3.5rem' }, 
-    expanded: { height: '7rem' }  
-  };
+
   const valuePath = 'values-blue';
   const collage_images =[
     <img key={'0'} className='relative rounded-3xl h-auto' src='https://i.imgur.com/TQ8WpCy.png' alt=''/>,
@@ -39,10 +26,7 @@ export default function Home() {
     <img key={'5'} className='relative rounded-3xl h-auto' src='https://i.imgur.com/Nl2Nish.png' alt=''/>,
     <img key={'6'} className='relative rounded-3xl h-auto' src='https://i.imgur.com/i3Uc328.png' alt=''/>
    ]
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setNavVis(position > 0);
-  };
+
   const [formError, setFormError] = useState(false);
 
   useEffect(()=>{
@@ -52,14 +36,6 @@ export default function Home() {
   
     return () => clearInterval(interval);
   },[])
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(()=>{
     const form = document.querySelector('form')
@@ -160,73 +136,7 @@ export default function Home() {
             }}>
           <div className='md:p-6 p-20'></div>
       {/* Header */}
-          <section className=' bg-transparent fixed w-full top-0 z-50'>
-            <motion.nav
-             animate={navVis?'compact':'expanded'}
-             variants={variants}
-             className='flex md:justify-between justify-center px-4'>
-                <a href='#'>
-                  <motion.img
-                  variants={imageVariants}
-                  animate={navVis ? 'compact' : 'expanded'}
-                    className=' md:ml-[2vw] mx-auto md:h-24 h-12 rounded-xl'
-                    src='https://i.imgur.com/Cmary4A.png'
-                    alt=''
-                  />
-                </a>
-              <div className='hidden xl:flex items-center md:mr-[10vw] sm:mr-auto'>
-                <ul className='flex mr-12'>
-                  <li className='mr-12'>
-                    <a
-                      className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='/#services'
-                    >
-                      Our Services
-                    </a>
-                  </li>
-                  <li className='mr-12'>
-                    <a
-                      className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='/#values'
-                    >
-                      About us
-                    </a>
-                  </li>
-                  <li className='mr-12'>
-                    <a
-                      className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='#'
-                    >
-                      Events
-                    </a>
-                  </li>
-                  <li className='mr-12'>
-                    <a
-                      className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='/careers'
-                    >
-                      Careers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={`${navVis?' text-white': 'text-coolGray-500'} hover:text-mto-orange font-medium`}
-                      href='/#FAQ'
-                    >
-                      FAQ
-                    </a>
-                  </li>
-                </ul>
-                <a
-                  className='inline-block py-2 px-4 text-sm leading-5 text-white bg-mto-blue hover:bg-mto-orange font-medium focus:ring-2 focus:ring-coolGray-500 focus:ring-opacity-50 rounded-md transition duration-150'
-                  href='#contact-form'
-                >
-                  Contact Us
-                </a>
-              </div>
-            </motion.nav>
-
-          </section>
+            <Header />
       {/* Hero */}
           <section>
             <div className='py-15 md:py-20'>
@@ -329,7 +239,7 @@ export default function Home() {
                     Respite
                   </h3>
                   <p className='text-coolGray-500 font-medium pt-4'>
-                    {"The NDIS refers to respite as 'short term accommodation' or STA, which is designed to offer a break to individuals serving as caregivers."}
+                    {"The NDIS refers to respite as 'short term accommodation' or STA, which is designed to offer a break to individuals with a disability and their serving as caregivers."}
                   </p>
                 </div>
               </div>
@@ -533,7 +443,7 @@ export default function Home() {
                 {`Discover what our participants have to say about their journey with us. Through their stories, you'll gain insight into the impact of our support and the transformative experiences our participants have undergone. From overcoming challenges to achieving milestones, these testimonials showcase the real-life successes of individuals within our community.`}
               </p>
             </div>
-            <div className='flex flex-wrap -mx-4'>
+            <div className='flex flex-wrap -mx-4 justify-center'>
               <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
                   <h3 className='pb-14 mb-auto text-lg md:text-xl font-medium'>
@@ -570,14 +480,20 @@ export default function Home() {
                   <p className='text-lg text-coolGray-400'>{`Participant's Family Member`}</p>
                 </div>
               </div>
-              <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8 lg:mb-0 hidden'>
+              <div className='w-full md:w-1/2 lg:w-1/3 px-4 mb-8 lg:mb-0'>
                 <div className='flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md'>
-                  <h3 className='pb-14 mb-auto text-xl md:text-2xl font-medium'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <h3 className='pb-14 mb-auto text-xl md:text-xl font-medium'>
+                  {`
+                  "I wanted to express my greatest thanks and appreciation to David and his amazing, outstanding efforts for our son. David goes above and beyond for Lee!
+                  We've not had a supportive worker like David.`} <br/><br/> {`If Lee doesn’t want to engage, Dave will find things to do in the home to support our family,
+                  this means a lot and is really appreciated.
+                  Lee and Dave’s bond is growing and it is very noticeable!`} <br/><br/> {`
+                  Thank you Mighty Orchid for your amazing support to our family"
+                  `}
                   </h3>
-                  <h4 className='mb-1 text-lg font-semibold'>John Doe</h4>
+                  <h4 className='mb-1 text-lg font-semibold'>-Tash, Gary, Lee, Nijel and Roxy</h4>
                   <p className='text-lg text-coolGray-400'>
-                    Customer Success
+                    {`Participant's Family`}
                   </p>
                 </div>
               </div>
