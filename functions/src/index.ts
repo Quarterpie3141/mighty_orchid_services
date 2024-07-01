@@ -37,10 +37,10 @@ export const sendmail = functions.https.onRequest((request, response)=>{
             })
             .catch((error) => {
               console.log(error);
-              response.status(500).send("Error occurred");
+              response.status(500).send("Error occurred" + error);
             });
         } else {
-          response.status(500).send("Failure");
+          response.status(500).send("SS Failure");
         }
       });
   }
