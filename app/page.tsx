@@ -1,10 +1,5 @@
 
-
 import { ContactForm, FAQ, Values, Header, Hero, Help, Testimonials, Footer} from "./components";
-
-
-
-
 
 export default function Home() {
 
