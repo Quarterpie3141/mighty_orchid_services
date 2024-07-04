@@ -177,6 +177,8 @@ export default function ContactForm(){
                         {``}
                       </p>
                       <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
+                        {`+61 8 5106 7301 (office)`}<br />
+                        {`or`} <br />
                         {`0433 362 261`}
                       </p>
                     </div>
@@ -201,15 +203,15 @@ export default function ContactForm(){
                       <h3 className='mb-4 text-2xl md:text-3xl font-bold leading-9 text-coolGray-900'>
                         Office
                       </h3>
-                      <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
-                        51/5-15 Sharpe Avenue
-                      </p>
-                      <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
-                        Karratha Village Business Center
-                      </p>
-                      <p className='text-lg md:text-xl text-coolGray-500 font-medium'>
-                        Karratha, WA 6714
-                      </p>
+                      <a href="https://www.google.com/maps/dir//Business+Center,+51,+5%2F15+Sharpe+Ave,+Karratha+WA+6714/@-20.7349931,116.8421831,16.96z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86b252b15355118b:0x30d9bdae1a426244!2m2!1d116.8436614!2d-20.7340226?entry=ttu">
+                        <p className='text-lg md:text-xl text-coolGray-500 font-medium hover:text-mto-orange transition'>
+                          51/5-15 Sharpe Avenue
+                          <br />
+                          Karratha Village Business Center
+                          <br />
+                          Karratha, WA 6714
+                        </p>
+                      </a>
                     </div>
                   </div>
                   <div className='w-full md:w-1/2 px-4'>
@@ -308,7 +310,7 @@ export default function ContactForm(){
                       </a>
                       <a
                         className='inline-block text-mto-blue hover:text-mto-orange transition duration-150'
-                        href='https://www.facebook.com/profile.php?id=61557284220147'
+                        href='https://au.linkedin.com/company/mighty-orchid-services-pty-ltd'
                       >
                         <svg
                           width={18}

@@ -40,7 +40,7 @@ export default function Home() {
       {/* Testimonials */}
         <Testimonials />
       {/* Meet the team */}
-        <section
+        {/*<section
           className='relative py-24 bg-white hidden'
           style={{
             backgroundImage: 'url("svg/pattern-white.svg")',
@@ -559,7 +559,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
       {/* Contact us*/}
         <ContactForm />
       {/* FAQ */}
