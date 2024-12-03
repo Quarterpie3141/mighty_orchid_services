@@ -16,6 +16,7 @@ const config: Config = {
       red: colors.red,
       gray: colors.gray,
       green: colors.green,
+      blue: colors.blue,
       'mto-blue': '#182b55',
       'mto-orange': '#f78830',
     },
@@ -24,6 +25,9 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        blocky: ['Anton', 'sans-serif'], // Add your custom font
       },
     },
     screens: {

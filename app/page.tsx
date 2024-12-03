@@ -1,46 +1,53 @@
-
-import { ContactForm, FAQ, Values, Header, Hero, Help, Testimonials, Footer} from "./components";
+"use client";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import {
+	ContactForm,
+	FAQ,
+	Footer,
+	Header,
+	Help,
+	Hero,
+	Testimonials,
+	Values,
+} from "./components";
 
 export default function Home() {
-
-  return (
-      <>
-      
-      <section 
-      className='relative bg-transparent overflow-hidden'
-      style={{
-          backgroundImage: 'url("https://i.imgur.com/vs6w1Nn.png")',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-            }}>
-          <div className='md:p-6 p-20'></div>
-      {/* Header */}
-        <Header />
-      {/* Hero */}
-        <Hero />
-      </section>
-      {/* How can we help you */}
-        <Help />
-      {/* Values */}
-        <Values />
-      {/* Parralax  */}
-        <section
-          className='pt-24 bg-white bg-fixed'
-          style={{
-            backgroundImage: 'url("https://i.imgur.com/sCLl6U6.png")',
-            backgroundPosition: 'top',
-            backgroundSize: 'cover'
-          }}
-        >
-          <div className=" h-96">
-          </div>
-          <div className=" h-24">
-          </div>
-        </section>
-      {/* Testimonials */}
-        <Testimonials />
-      {/* Meet the team */}
-        {/*<section
+	return (
+		<>
+			<section
+				className="relative bg-transparent overflow-hidden"
+				style={{
+					backgroundImage: 'url("https://i.imgur.com/vs6w1Nn.png")',
+					backgroundPosition: "center",
+					backgroundSize: "cover",
+				}}
+			>
+				<div className="md:p-6 p-20 pb-16" />
+				{/* Header */}
+				<Header />
+				{/* Hero */}
+				<Hero />
+			</section>
+			{/* How can we help you */}
+			<Help />
+			{/* Values */}
+			<Values />
+			{/* Parralax  */}
+			<section
+				className="pt-24 bg-white bg-fixed"
+				style={{
+					backgroundImage: 'url("https://i.imgur.com/sCLl6U6.png")',
+					backgroundPosition: "top",
+					backgroundSize: "cover",
+				}}
+			>
+				<div className=" h-96" />
+				<div className=" h-24" />
+			</section>
+			{/* Testimonials */}
+			<Testimonials />
+			{/* Meet the team */}
+			{/*<section
           className='relative py-24 bg-white hidden'
           style={{
             backgroundImage: 'url("svg/pattern-white.svg")',
@@ -560,14 +567,14 @@ export default function Home() {
             </div>
           </div>
         </section>*/}
-      {/* Contact us*/}
-        <ContactForm />
-      {/* FAQ */}
-        <FAQ />
-      {/* Footer */}
-        <Footer />
-      </>
-  );
+			{/* Contact us*/}
+			<GoogleReCaptchaProvider reCaptchaKey="6LfdUlkqAAAAAEKojQwPa5xKxSYkVRV-Jho82hi1">
+				<ContactForm />
+			</GoogleReCaptchaProvider>
+			{/* FAQ */}
+			<FAQ />
+			{/* Footer */}
+			<Footer />
+		</>
+	);
 }
-
-
