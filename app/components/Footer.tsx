@@ -44,9 +44,9 @@ export default function Footer() {
 								>
 									Events
 								</a>
-								<span className="absolute top-0 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
+								{/*<span className="absolute top-0 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
 									1
-								</span>
+								</span>*/}
 							</div>
 						</div>
 						<div className="w-full md:w-auto p-3 md:px-6 flex justify-center">
