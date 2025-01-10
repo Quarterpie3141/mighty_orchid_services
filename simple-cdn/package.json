@@ -1,0 +1,18 @@
+{
+  "name": "simple-cdn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "run": "npx tsc && node ./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2"
+  }
+}

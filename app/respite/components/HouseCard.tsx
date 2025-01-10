@@ -1,24 +1,42 @@
 "use client";
-
-export default function HouseCard() {
-
-	return (
-        <div className="flex flex-col xl:w-1/3 lg:w-1/2 w-full content-between mx-auto">
-            <div className="bg-white border-8 rounded-xl shadow m-auto relative bg-[url('https://i.imgur.com/13j0svE.png')] bg-cover max-w-[25rem] min-w-[10rem] w-full aspect-square">
-            
-              <div className=" w-4/5 h-1/5 bg-mto-blue bg-opacity-40 backdrop-blur-lg absolute bottom-0 rounded-tr-2xl">
-                    <h1 className=" text-white text-xl m-2">
-                        Place holder
-                    </h1>
-              </div>
-            
-            </div>
-            <a href="/#">
-                <div className=" bg-mto-blue hover:bg-mto-orange transition rounded-full mt-4 mx-10 w-max p-3">
-                    Learn more
-                </div>
-            </a>
-        </div>
-	);
+interface HouseCardProps {
+	image: string;
+	name: string;
+	address: string;
+	link: string;
 }
 
+const HouseCard: React.FC<HouseCardProps> = ({
+	image,
+	name,
+	address,
+	link,
+}) => {
+	return (
+		<div className="flex flex-col justify-between rounded-lg bg-mto-blue m-auto max-w-96 min-w-60 h-[370px] shadow-md w-1/3 mb-24">
+			<div className="relative mt-6 mx-4 rounded-lg bg-white shadow-md h-56">
+				<img
+					src={image}
+					alt="House"
+					className="object-cover h-full w-full rounded-xl mb-6"
+				/>
+			</div>
+			<div className="border-none p-6 text-center">
+				<p className="text-white tracking-normal leading-relaxed font-semibold text-lg my-4">
+					{name}
+				</p>
+			</div>
+			<div className="p-3 border border-white flex items-center justify-between bg-white">
+				<p className="font-light text-xs text-mto-blue">{address}</p>
+				<a
+					href={link}
+					className="select-none border-none outline-none shadow-md text-white uppercase font-bold text-xs px-6 py-3 bg-mto-blue hover:bg-mto-orange transition rounded-md"
+				>
+					Learn More
+				</a>
+			</div>
+		</div>
+	);
+};
+
+export default HouseCard;
