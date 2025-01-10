@@ -3,7 +3,7 @@ const path = require('node:path');
 const app = express();
 const PORT = 3000;
 // Serve static files from the 'public' folder
-const baseDir = path.join(__dirname, 'public');
+const baseDir = "/public";
 console.log(`using ${baseDir}`);
 // Custom middleware to log each static file request along with the client's IP, date, and time
 app.use((req, res, next) => {
