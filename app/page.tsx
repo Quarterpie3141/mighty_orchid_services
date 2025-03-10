@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
 	return (
-		<>
+		<GoogleReCaptchaProvider reCaptchaKey="6LfVA-oqAAAAAPb9xgUrF4ZR_SX5wdIjCCCDxrMI">
 			<section
 				className="relative bg-transparent overflow-hidden"
 				style={{
@@ -28,6 +28,7 @@ export default function Home() {
 				{/* Hero */}
 				<Hero />
 			</section>
+
 			{/* How can we help you */}
 			<Help />
 			{/* Values */}
@@ -41,8 +42,7 @@ export default function Home() {
 					backgroundSize: "cover",
 				}}
 			>
-				<div className=" h-96" />
-				<div className=" h-24" />
+				<div className=" h-[30rem]" />
 			</section>
 			{/* Testimonials */}
 			<Testimonials />
@@ -568,13 +568,11 @@ export default function Home() {
           </div>
         </section>*/}
 			{/* Contact us*/}
-			<GoogleReCaptchaProvider reCaptchaKey="6LfdUlkqAAAAAEKojQwPa5xKxSYkVRV-Jho82hi1">
-				<ContactForm />
-			</GoogleReCaptchaProvider>
+			<ContactForm />
 			{/* FAQ */}
 			<FAQ />
 			{/* Footer */}
 			<Footer />
-		</>
+		</GoogleReCaptchaProvider>
 	);
 }

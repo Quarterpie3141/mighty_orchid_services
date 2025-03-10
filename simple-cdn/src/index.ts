@@ -1,6 +1,5 @@
 const express = require('express');
-const path = require('node:path');
-
+import type { Request, Response, NextFunction } from 'express';
 const app = express();
 const PORT = 3000;
 
@@ -9,10 +8,10 @@ const baseDir = "/public"
 console.log(`using ${baseDir}`);
 
 // Custom middleware to log each static file request along with the client's IP, date, and time
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   if (req.path.startsWith('/')) { // Check if it's a request for static files
     const now = new Date();
-    const timestamp = now.toISOString(); // ISO 8601 format (e.g., "2025-01-10T12:34:56.789Z")
+    const timestamp = now.toISOString(); // ISO 8601 format
     console.log(`[${timestamp}] Static file requested: ${req.path} | Requesting IP: ${req.ip}`);
   }
   next();
@@ -22,7 +21,7 @@ app.use((req, res, next) => {
 app.use(express.static(baseDir));
 
 // Example API route
-app.get('/api/hello', (req, res) => {
+app.get('/api/hello', (req: Request, res: Response) => {
   res.json({ message: 'Hello from the API!' });
 });
 

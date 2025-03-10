@@ -5,7 +5,7 @@ import { FeedbackForm, Footer, Header } from "../components";
 
 export default function Careers() {
 	return (
-		<GoogleReCaptchaProvider reCaptchaKey="6LfdUlkqAAAAAEKojQwPa5xKxSYkVRV-Jho82hi1">
+		<GoogleReCaptchaProvider reCaptchaKey="6LfVA-oqAAAAAPb9xgUrF4ZR_SX5wdIjCCCDxrMI">
 			{/* Header */}
 			<Header />
 			<section

@@ -21,18 +21,24 @@ export default function Home() {
 							<h1 className="mb-4 text-3xl md:text-4xl leading-tight font-bold text-mto-blue">
 								Discover Our dedicated respite houses
 							</h1>
-							<div className="md:w-1/2 ">
+							<div className="md:w-3/4 ">
 								<h1 className="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
-									Forank ince cepescro. Fralle hodura: Eng thelly not poses an,
-									expenvie y is of riteme Due chat thing, Nation the lied mender
-									descia jught Aqued Schall rive uponegis Rus reire, and his
-									quentro. Berled thumpor, als diturat thinthave shaver.
+									At MTOS, we take pride in offering purpose-built respite
+									houses designed to provide a safe, comfortable, and inclusive
+									environment for everyone.
+									<br />
+									<br />
+									Each home is thoughtfully crafted to meet modern living
+									standards, ensuring accessibility and convenience for all
+									guests. Whether you're looking for a peaceful retreat or a
+									place to connect with others, our respite houses are here to
+									support your needs.
 								</h1>
 							</div>
 						</div>
 						<div className="w-5/6 max-w-[50rem] md:min-w-[20rem] min-w-[10rem]">
 							<img
-								src="https://i.imgur.com/13j0svE.png"
+								src="https://cdn.mtos.com.au/images/respite-houses/cover.jpg"
 								className=" h-auto w-auto rounded-3xl m-8"
 								alt=""
 							/>
@@ -43,34 +49,34 @@ export default function Home() {
 				<div className=" bg-mto-blue-100 w-11/12 m-auto h-auto rounded-[4rem]">
 					<div className=" flex m-auto w-5/6 pt-28 flex-wrap relative">
 						<HouseCard
-							image="/respite-houses/10-grant-street-bulgarra-cover.jpeg"
+							image="https://cdn.mtos.com.au/images/respite-houses/10-grant-street-bulgarra/cover.jpeg"
 							name="Grant Street Bulgarra"
 							address="10 Grant Street Bulgarra"
-							link="/#"
+							link="/respite/houses/10-Grant-Street-Bulgarra"
 						/>
 						<HouseCard
-							image="/respite-houses/10-grant-street-bulgarra-cover.jpeg"
-							name="Grant Street Bulgarra"
-							address="10 Grant Street Bulgarra"
-							link="/#"
+							image="https://cdn.mtos.com.au/images/respite-houses/35-mujira-ramble-baynton/cover.jpeg"
+							name="Mujira Ramble Baynton"
+							address="35 Mujira Ramble Baynton"
+							link="/respite/houses/35-Mujira-Ramble-Baynton"
 						/>
 						<HouseCard
-							image="/respite-houses/10-grant-street-bulgarra-cover.jpeg"
-							name="Grant Street Bulgarra"
-							address="10 Grant Street Bulgarra"
-							link="/#"
+							image="https://cdn.mtos.com.au/images/respite-houses/39B-delambre-drive-nickol/cover.jpeg"
+							name="Delambre Drive, Nickol"
+							address="39B Delambre Drive, Nickol"
+							link="/respite/houses/39B-Delambre-Drive-Nickol"
 						/>
 						<HouseCard
-							image="/respite-houses/10-grant-street-bulgarra-cover.jpeg"
-							name="Grant Street Bulgarra"
-							address="10 Grant Street Bulgarra"
-							link="/#"
+							image="https://cdn.mtos.com.au/images/respite-houses/7a-jennifer-court-pegscreek/cover.jpeg"
+							name="Jennifer Court Pegscreek"
+							address="7A Jennifer Court Pegscreek"
+							link="/respite/houses/7a-Jennifer-Court-Pegscreek"
 						/>
 						<HouseCard
-							image="/respite-houses/10-grant-street-bulgarra-cover.jpeg"
-							name="Grant Street Bulgarra"
-							address="10 Grant Street Bulgarra"
-							link="/#"
+							image="https://cdn.mtos.com.au/images/respite-houses/39E-delambre-drive-nickol/cover.jpeg"
+							name="Delambre Drive Nickol"
+							address="139E-delambre-drive-nickol"
+							link="/respite/houses/39E-Delambre-Drive-Nickol"
 						/>
 					</div>
 				</div>

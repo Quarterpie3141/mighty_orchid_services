@@ -4,9 +4,14 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: "https",
-          hostname: "i.imgur.com, sendmail-ejqhdbrtsq-uc.a.run.app",
+          hostname: "i.imgur.com",
         },
+        {
+          protocol: "https",
+          hostname: "cdn.mtos.com.au"
+        }
       ],
+      unoptimized: true
     },
   };
 

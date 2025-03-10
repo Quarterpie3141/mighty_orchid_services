@@ -37,7 +37,7 @@ export default function Help() {
 							<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
 								Supported Independent Living (SIL)
 							</h3>
-							<p className="text-coolGray-500 font-medium">
+							<p className="text-coolGray-500 font-medium mb-6">
 								Your NDIS plan includes SIL funding, enabling you to live with
 								friends or acquaintances who also have disabilities, while
 								providing for a support worker to assist you.
@@ -62,6 +62,27 @@ export default function Help() {
 									"The NDIS refers to respite as 'short term accommodation' or STA, which is designed to offer a break to individuals with a disability and their serving as caregivers."
 								}
 							</p>
+							<a
+								href="/respite"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4">

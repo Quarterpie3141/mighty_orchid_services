@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Header } from "../components";
+import { Footer, Header } from "../components";
 
 export default function Careers() {
 	return (
@@ -76,7 +76,7 @@ export default function Careers() {
 								</p>
 								<a
 									className="inline-block py-2 px-4 mt-4 text-sm leading-5 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md transition duration-150"
-									href="/careers/job2"
+									href="/careers/disability_support_worker"
 								>
 									Learn More
 								</a>
@@ -101,7 +101,7 @@ export default function Careers() {
 								</p>
 								<a
 									className="inline-block py-2 px-4 mt-4 text-sm leading-5 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md transition duration-150"
-									href="/careers/job3"
+									href="/careers/disability_support_worker"
 								>
 									Learn More
 								</a>
@@ -111,112 +111,7 @@ export default function Careers() {
 				</div>
 			</section>
 			{/* Footer */}
-			<section
-				className="bg-white pt-40"
-				style={{
-					backgroundImage: 'url("../svg/pattern-white.svg")',
-					backgroundPosition: "center",
-				}}
-			>
-				<div className="container px-4 mx-auto">
-					<div className="pt-24 pb-0 mx-auto max-w-4xl">
-						<a className="block md:mx-auto mb-5 max-w-max" href="/#">
-							<div className=" pb-11">
-								<img
-									src="https://i.imgur.com/Cmary4A.png"
-									className=" rounded-lg md:h-24 h-12"
-									alt="logo"
-								/>
-							</div>
-						</a>
-						<div className="flex flex-wrap justify-center -mx-3 lg:-mx-6">
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/#services"
-								>
-									Our Services
-								</a>
-							</div>
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/#values"
-								>
-									About us
-								</a>
-							</div>
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/#"
-								>
-									Events
-								</a>
-							</div>
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/careers#"
-								>
-									Careers
-								</a>
-							</div>
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/#FAQ"
-								>
-									FAQ
-								</a>
-							</div>
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/#contact-form"
-								>
-									Contact Us
-								</a>
-							</div>
-							<div className="w-full md:w-auto p-3 md:px-6">
-								<a
-									className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-									href="/#"
-								>
-									Home
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="border-b border-coolGray-100" />
-				<div className="container px-4 mx-auto">
-					<p className="py-10 md:pb-10 text-lg md:text-xl text-coolGray-400 font-medium text-center">
-						Mighty Orchid Services Pty Ltd.
-					</p>
-				</div>
-				<div className="container px-4 mx-auto">
-					<p className=" text-lg md:text-xl text-coolGray-400 font-medium text-center">
-						A proud member of:
-					</p>
-				</div>
-				<div className=" flex justify-center px-4 mx-auto">
-					<a href="https://kdcci.com.au/">
-						<img
-							className="w-72 p-5 mr-40 "
-							src="other-assets/KDCCI.jpg"
-							alt="KDDCI"
-						/>
-					</a>
-					<a href="https://www.onslowcci.com.au/">
-						<img
-							className=" w-72 p-5 mt-10"
-							src="other-assets/OCCI.svg"
-							alt="OCCI"
-						/>
-					</a>
-				</div>
-			</section>
+			<Footer />
 		</>
 	);
 }

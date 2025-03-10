@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Footer, Header } from "../components";
 
 export default function ReferralForm() {
@@ -14,6 +14,119 @@ export default function ReferralForm() {
 	const handleHasRepChange = () => {
 		setHasRep(!hasRep);
 	};
+
+		const [formWaiting, setFormWaiting] = useState(false);
+		const [formError, setFormError] = useState<string | null>(null);
+		const [formSuccess, setFormSuccess] = useState(false);
+	
+		// State variables for form fields
+		const [email, setEmail] = useState("");
+		const [name, setName] = useState("");
+		const [message, setMessage] = useState("");
+		const [phone, setPhone] = useState("");
+		
+		const [participantInfo, setParticipantInfo] = useState({
+			firstName: "",
+			lastName: "",
+			gender: "",
+			dob: "",
+			address: "",
+			suburb: "",
+			postcode: "",
+			state: "",
+			phone: "",
+			email: "",
+			ndisNumber: "",
+			fundingType: "",
+			primaryDisability: "",
+			secondaryDisability: "",
+			referralReason: "",
+		  });
+
+		  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement> ) => {
+			const { name, value } = e.target;
+			setParticipantInfo((prevInfo) => ({
+			  ...prevInfo,
+			  [name]: value,
+			}));
+		  };
+
+		const { executeRecaptcha } = useGoogleReCaptcha();
+	
+		const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+			event.preventDefault();
+			setFormWaiting(true);
+			setFormError(null);
+			setFormSuccess(false);
+	
+			// Client-side validation
+			if (!name || !email || !message) {
+				setFormError("Please fill in all required fields.");
+				setFormWaiting(false);
+				return;
+			}
+	
+			if (!executeRecaptcha) {
+				console.log("Recaptcha not ready");
+				setFormError("Recaptcha not ready, please try again later.");
+				setFormWaiting(false);
+				return;
+			}
+	
+			try {
+				// Execute reCAPTCHA with the action name
+				const token = await executeRecaptcha("form_submission");
+	
+				// Prepare data to send
+				const dataToSend = {
+					token,
+					email,
+					message,
+					phone: phone || "Not provided",
+					name,
+				};
+	
+				// Send data to the server
+				const response = await fetch(
+					"https://sendmailcontact-ejqhdbrtsq-uc.a.run.app",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify(dataToSend),
+					},
+				);
+	
+				const result = await response.json();
+				console.log(result);
+	
+				if (response.ok) {
+					// Success
+					setFormSuccess(true);
+					setFormWaiting(false);
+					// Clear form fields
+					setEmail("");
+					setName("");
+					setMessage("");
+					setPhone("");
+				} else {
+					// Server responded with an error
+					setFormError(
+						result.message || "An error occurred while submitting the form.",
+					);
+					setFormWaiting(false);
+				}
+			} catch (error) {
+				console.error("An unexpected error occurred:", error);
+				let errorMessage = "An unexpected error occurred. Please try again.";
+				if (error instanceof Error) {
+					errorMessage = error.message;
+				}
+				setFormError(errorMessage);
+				setFormWaiting(false);
+			}
+		};
 
 	return (
 		<GoogleReCaptchaProvider reCaptchaKey="6LfdUlkqAAAAAEKojQwPa5xKxSYkVRV-Jho82hi1">
@@ -30,9 +143,9 @@ export default function ReferralForm() {
 				id="referral-form"
 			>
 				<div className="container mx-auto m-12 w-auto">
-					<div className="md:max-w-4xl mb-12 mx-auto text-center">
+					<div className="md:max-w-5xl mb-12 mx-auto text-center p-4">
 						<span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-mto-orange font-medium uppercase rounded-full shadow-sm">
-							REFERRAL FORM
+							Referral Form
 						</span>
 						<h1 className="mb-4 text-3xl md:text-4xl leading-tight font-bold tracking-tighter">
 							Participant Referral Details
@@ -58,9 +171,17 @@ export default function ReferralForm() {
 							possible.
 						</p>
 					</div>
-					<div className="">
-						<form className="max-w-md mx-auto">
+						
+						<form className="max-w-4xl mx-auto p-4">
+						
+										<div className="mb-2">
+											<p className=" text-mto-blue text-xl">
+												Participant details
+											</p>
+										</div>
+										<hr className="" />
 							<div className="grid md:grid-cols-2 md:gap-6">
+								
 								<div className="mb-5">
 									<label
 										htmlFor="firstname"
@@ -70,9 +191,11 @@ export default function ReferralForm() {
 									</label>
 									<input
 										type="text"
-										id="firstname"
+										name="firstName"
 										className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
 										placeholder=""
+										value={participantInfo.firstName}
+										onChange={handleChange}
 										required
 									/>
 								</div>
@@ -85,9 +208,11 @@ export default function ReferralForm() {
 									</label>
 									<input
 										type="text"
-										id="lastname"
+										name="lastName"
 										className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
 										placeholder=""
+										value={participantInfo.lastName}
+										onChange={handleChange}
 										required
 									/>
 								</div>
@@ -104,6 +229,9 @@ export default function ReferralForm() {
 									<select
 										id="gender"
 										className="bg-gray-50 border border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5 "
+										name="gender"
+										value={participantInfo.gender}
+										onChange={handleChange}
 									>
 										<option>Prefer not to answer</option>
 										<option>Female</option>
@@ -121,8 +249,10 @@ export default function ReferralForm() {
 									<input
 										type="date"
 										id="dob"
+										name="dob"
 										className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
-										placeholder=""
+										value={participantInfo.dob}
+										onChange={handleChange}
 										required
 									/>
 								</div>
@@ -138,8 +268,10 @@ export default function ReferralForm() {
 								<input
 									type="text"
 									id="address"
+									name="address"
 									className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
-									placeholder=""
+									value={participantInfo.address}
+									onChange={handleChange}
 									required
 								/>
 							</div>
@@ -155,8 +287,10 @@ export default function ReferralForm() {
 									<input
 										type="text"
 										id="suburb"
+										name="suburb"
 										className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
-										placeholder=""
+										value={participantInfo.suburb}
+										onChange={handleChange}
 										required
 									/>
 								</div>
@@ -171,8 +305,10 @@ export default function ReferralForm() {
 										<input
 											type="text"
 											id="postcode"
+											name="postcode"
 											className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
-											placeholder=""
+											value={participantInfo.postcode}
+											onChange={handleChange}
 											required
 										/>
 									</div>
@@ -186,8 +322,10 @@ export default function ReferralForm() {
 										<input
 											type="text"
 											id="state"
+											name="state"
 											className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
-											placeholder=""
+											value={participantInfo.state}
+											onChange={handleChange}
 											required
 										/>
 									</div>
@@ -205,8 +343,10 @@ export default function ReferralForm() {
 									<input
 										type="text"
 										id="phonenumber"
+										name="phone"
 										className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
-										placeholder=""
+										value={participantInfo.phone}
+										onChange={handleChange}
 										required
 									/>
 								</div>
@@ -220,6 +360,7 @@ export default function ReferralForm() {
 									<input
 										type="text"
 										id="emailaddress"
+										name="email"
 										className="bg-gray-50 border-2 border-gray-300 text-mto-blue text-sm rounded-lg focus:ring-mto-orange focus:border-mto-orange block w-full p-2.5"
 										placeholder=""
 										required
@@ -277,6 +418,49 @@ export default function ReferralForm() {
 										<option>Plan Managed</option>
 										<option>NDIS Managed</option>
 									</select>
+								</div>
+								<div className="mb-5">
+									<label
+										htmlFor="message"
+										className="block mb-2 text-sm font-medium text-mto-blue"
+									>
+										Primary Disability
+									</label>
+									<textarea
+										id="message"
+										rows={2}
+										className="block p-2.5 w-full text-sm text-mto-blue bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-mto-orange focus:border-mto-orange"
+									/>
+								</div>
+								<div className="mb-5">
+									<label
+										htmlFor="message"
+										className="block mb-2 text-sm font-medium text-mto-blue"
+									>
+										Secondary Disability
+									</label>
+									<textarea
+										id="message"
+										rows={2}
+										className="block p-2.5 w-full text-sm text-mto-blue bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-mto-orange focus:border-mto-orange"
+									/>
+								</div>
+								
+							</div>
+							
+							<div className="items-center mb-4">
+								<div className="mb-5">
+									<label
+										htmlFor="message"
+										className="block mb-2 text-sm font-medium text-mto-blue"
+									>
+										Referral reason
+									</label>
+									<textarea
+										id="message"
+										rows={4}
+										className="block p-2.5 w-full text-sm text-mto-blue bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-mto-orange focus:border-mto-orange"
+									/>
 								</div>
 							</div>
 
@@ -624,45 +808,7 @@ export default function ReferralForm() {
 									/>
 								</div>
 
-								<div className="mb-5">
-									<label
-										htmlFor="message"
-										className="block mb-2 text-sm font-medium text-mto-blue"
-									>
-										Primary Disability
-									</label>
-									<textarea
-										id="message"
-										rows={2}
-										className="block p-2.5 w-full text-sm text-mto-blue bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-mto-orange focus:border-mto-orange"
-									/>
-								</div>
-								<div className="mb-5">
-									<label
-										htmlFor="message"
-										className="block mb-2 text-sm font-medium text-mto-blue"
-									>
-										Secondary Disability
-									</label>
-									<textarea
-										id="message"
-										rows={2}
-										className="block p-2.5 w-full text-sm text-mto-blue bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-mto-orange focus:border-mto-orange"
-									/>
-								</div>
-								<div className="mb-5">
-									<label
-										htmlFor="message"
-										className="block mb-2 text-sm font-medium text-mto-blue"
-									>
-										Referral reason
-									</label>
-									<textarea
-										id="message"
-										rows={4}
-										className="block p-2.5 w-full text-sm text-mto-blue bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-mto-orange focus:border-mto-orange"
-									/>
-								</div>
+
 							</div>
 
 							<button
@@ -672,7 +818,6 @@ export default function ReferralForm() {
 								Submit
 							</button>
 						</form>
-					</div>
 				</div>
 			</section>
 			{/* Footer */}

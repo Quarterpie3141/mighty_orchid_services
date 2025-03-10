@@ -8,43 +8,43 @@ const collage_images = [
 	<img
 		key={"0"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/TQ8WpCy.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C0.png"
 		alt=""
 	/>,
 	<img
 		key={"1"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/13j0svE.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C1.png"
 		alt=""
 	/>,
 	<img
 		key={"2"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/7sQiXD6.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C2.png"
 		alt=""
 	/>,
 	<img
 		key={"3"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/4yOpfWH.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C3.png"
 		alt=""
 	/>,
 	<img
 		key={"4"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/fcCgUdF.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C4.png"
 		alt=""
 	/>,
 	<img
 		key={"5"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/Nl2Nish.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C5.png"
 		alt=""
 	/>,
 	<img
 		key={"6"}
 		className="relative rounded-3xl h-auto"
-		src="https://i.imgur.com/i3Uc328.png"
+		src="https://cdn.mtos.com.au/images/collage-content/C6.png"
 		alt=""
 	/>,
 ];
