@@ -51,7 +51,7 @@ export const sendMailFeedback = functions.https.onRequest(
 								},
 								To: [
 									{
-										Email: "it@mtos.com.au",
+										Email: "info@mtos.com.au",
 										Name: "Recipient",
 									},
 								],

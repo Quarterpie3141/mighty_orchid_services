@@ -39,7 +39,7 @@ export default function Careers() {
 									<img
 										width={35}
 										height={35}
-										src="../service-svg/briefcase-outline.svg"
+										src="https://mtos.com.au/service-svg/briefcase-outline.svg"
 										alt="Job 1"
 									/>
 								</div>
@@ -57,51 +57,51 @@ export default function Careers() {
 								</a>
 							</div>
 						</div>
-						<div className="w-full md:w-1/2 lg:w-1/3 px-4 hidden">
+						<div className="w-full md:w-1/2 lg:w-1/3 px-4">
 							<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
 								<div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-mto-blue rounded-lg">
 									<img
 										width={35}
 										height={35}
-										src="/icons/job2.svg"
+										src="https://mtos.com.au/service-svg/care-treatment-heart-svgrepo-com.svg"
 										alt="Job 2"
 									/>
 								</div>
 								<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
-									Job Title 2
+									Registered Nurse
 								</h3>
 								<p className="text-coolGray-500 font-medium">
-									Brief description of Job Title 2. Highlight key
-									responsibilities and requirements.
+									{`At Mighty Orchid Services, we are committed to providing exceptional medical services to individuals in our community. We're seeking compassionate, dedicated, and skilled Registered Nurses to become an integral part of our team. This role involves delivering high-quality patient care, promoting health and wellness, and making a positive impact on the lives of our patients.`}
 								</p>
 								<a
 									className="inline-block py-2 px-4 mt-4 text-sm leading-5 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md transition duration-150"
-									href="/careers/disability_support_worker"
+									href="/careers/registered-nurse"
 								>
 									Learn More
 								</a>
 							</div>
 						</div>
-						<div className="w-full md:w-1/2 lg:w-1/3 px-4 hidden">
+						<div className="w-full md:w-1/2 lg:w-1/3 px-4">
 							<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
 								<div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-mto-blue rounded-lg">
 									<img
 										width={35}
 										height={35}
-										src="/icons/job3.svg"
+										src="https://mtos.com.au/service-svg/laptop-svgrepo-com.svg"
 										alt="Job 3"
 									/>
 								</div>
 								<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
-									Job Title 3
+									Disability Service Officer
 								</h3>
 								<p className="text-coolGray-500 font-medium">
-									Brief description of Job Title 3. Highlight key
-									responsibilities and requirements.
+									A Disability Service Officer plays a pivotal role in
+									coordinating and delivering compassionate care, assistance,
+									and support to individuals living with disabilities
 								</p>
 								<a
 									className="inline-block py-2 px-4 mt-4 text-sm leading-5 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md transition duration-150"
-									href="/careers/disability_support_worker"
+									href="/careers/disability_service_officer"
 								>
 									Learn More
 								</a>

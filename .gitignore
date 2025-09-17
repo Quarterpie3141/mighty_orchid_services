@@ -40,3 +40,5 @@ next-env.d.ts
 #firebase hosting cache
 .firebase*
 
+#puppeteer chrome cache
+functions/.cache

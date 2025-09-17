@@ -30,7 +30,7 @@ export default function Help() {
 								<img
 									width={35}
 									height={35}
-									src="/service-svg/home-svgrepo-com(1).svg"
+									src="https://mtos.com.au/service-svg/home-svgrepo-com.svg"
 									alt="Service"
 								/>
 							</div>
@@ -50,7 +50,7 @@ export default function Help() {
 								<img
 									width={35}
 									height={35}
-									src="/service-svg/care-treatment-heart-svgrepo-com(1).svg"
+									src="https://mtos.com.au/service-svg/care-treatment-heart-svgrepo-com.svg"
 									alt="Heart"
 								/>
 							</div>
@@ -91,7 +91,7 @@ export default function Help() {
 								<img
 									width={35}
 									height={35}
-									src="/service-svg/community-group-leader-svgrepo-com.svg"
+									src="https://mtos.com.au/service-svg/community-group-leader-svgrepo-com.svg"
 									alt="Service"
 								/>
 							</div>
@@ -112,7 +112,7 @@ export default function Help() {
 								<img
 									width={35}
 									height={35}
-									src="/service-svg/life-insurance-svgrepo-com.svg"
+									src="https://mtos.com.au/service-svg/life-insurance-svgrepo-com.svg"
 									alt="life"
 								/>
 							</div>
@@ -133,7 +133,7 @@ export default function Help() {
 								<img
 									width={35}
 									height={35}
-									src="/service-svg/life-svgrepo-com.svg"
+									src="https://mtos.com.au/service-svg/life-svgrepo-com.svg"
 									alt="Life"
 								/>
 							</div>
@@ -153,7 +153,7 @@ export default function Help() {
 								<img
 									width={35}
 									height={35}
-									src="service-svg/work-svgrepo-com.svg"
+									src="https://mtos.com.au/service-svg/work-svgrepo-com.svg"
 									alt="Work"
 								/>
 							</div>

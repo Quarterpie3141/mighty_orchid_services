@@ -150,7 +150,7 @@ export default function ContactForm() {
 							</div>
 							<div className="w-full md:w-1/2 px-4 mb-10">
 								<div className="max-w-xs mx-auto">
-									<div className="inline-flex mb-6 items-center justify-center w-12 h-12 bg-mto-blue rounded-full">
+									<div className="inline-flex mb-4 items-center justify-center w-12 h-12 bg-mto-blue rounded-full">
 										<svg
 											className="h-6 text-white"
 											width={24}
@@ -166,16 +166,27 @@ export default function ContactForm() {
 											/>
 										</svg>
 									</div>
-									<h3 className="mb-4 text-2xl md:text-3xl font-bold leading-9 text-coolGray-900">
+									<h3 className="mb-2 text-xl md:text-2xl font-bold leading-7 text-coolGray-900">
 										Phone
 									</h3>
-									<p className="text-lg md:text-xl text-coolGray-500 font-medium" />
-									<p className="text-lg md:text-xl text-coolGray-500 font-medium">
-										{"+61 8 5106 7301 (office)"}
-										<br />
-										{"or"} <br />
-										{"0433 362 261"}
-									</p>
+									<div className="text-base md:text-lg text-coolGray-500 font-normal space-y-1">
+										<p>
+											<span className="font-semibold">Main Office:</span> +61 8
+											5106 7301
+										</p>
+										<p>
+											<span className="font-semibold">Headland:</span> 0499 413
+											302
+										</p>
+										<p>
+											<span className="font-semibold">First On-call:</span> 0499
+											190 471
+										</p>
+										<p>
+											<span className="font-semibold">Second On-call:</span>{" "}
+											0499 180 895
+										</p>
+									</div>
 								</div>
 							</div>
 							<div className="w-full md:w-1/2 px-4 mb-10 md:mb-0">

@@ -19,11 +19,10 @@ const config: Config = {
       blue: colors.blue,
       'mto-blue': '#182b55',
       'mto-orange': '#f78830',
-      'mto-snow': '#FFFBFF',
-      'mto-moonstone': '#63B0CD',
-      'mto-steelblue': '#3F88C5',
       'mto-slategray': '#6E8898',
-      'mto-moon': '#779FA1'
+      'mto-celadon': '#B3DEC1',
+      'mto-mint': '#DBF9F0',
+      'mto-powder': '#F7F9F7'
     },
     extend: {
       backgroundImage: {

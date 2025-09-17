@@ -9,6 +9,10 @@ const nextConfig = {
         {
           protocol: "https",
           hostname: "cdn.mtos.com.au"
+        },
+        {
+          protocol: "https",
+          hostname: "mtos.com.au"
         }
       ],
       unoptimized: true

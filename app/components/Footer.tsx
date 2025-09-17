@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Footer() {
 	return (
 		<section
 			className="bg-white"
 			style={{
-				backgroundImage: 'url("svg/pattern-white.svg")',
+				backgroundImage: 'url("https://mtos.com.au/svg/pattern-white.svg")',
 				backgroundPosition: "center",
 			}}
 			id="Footer"
@@ -105,17 +107,21 @@ export default function Footer() {
 			</div>
 			<div className=" flex justify-center px-4 mx-auto">
 				<a href="https://kdcci.com.au/">
-					<img
+					<Image
 						className="w-72 p-5 mr-40"
-						alt="KDCCI"
-						src="other-assets/KDCCI.jpg"
+						src={"https://mtos.com.au/other-assets/KDCCI.jpg"}
+						alt="KDCCI Logo"
+						width={200}
+						height={120}
 					/>
 				</a>
 				<a href="https://www.onslowcci.com.au/">
-					<img
-						className=" w-72 p-5 mt-10"
-						alt="OCCI"
-						src="other-assets/OCCI.svg"
+					<Image
+						className="w-72 p-5 mt-10"
+						src={"https://mtos.com.au/other-assets/OCCI.svg"}
+						alt="OCCI Logo"
+						width={124}
+						height={141}
 					/>
 				</a>
 			</div>
