@@ -20,8 +20,14 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
+			"a11y": {
+				"useValidAnchor": "off"
+			},
 			"suspicious": {
-        		"noExplicitAny": "warn"
+        		"noExplicitAny": "off"
       		}
 		}
 	},

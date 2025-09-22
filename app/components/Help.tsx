@@ -42,6 +42,27 @@ export default function Help() {
 								friends or acquaintances who also have disabilities, while
 								providing for a support worker to assist you.
 							</p>
+							<a
+								href="/services/service-supported-independent-living-(SIL)"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4">
@@ -104,6 +125,27 @@ export default function Help() {
 								relaxation spots, as well as to participate in local community
 								events and activities.
 							</p>
+							<a
+								href="/services/community-access"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4">
@@ -125,6 +167,27 @@ export default function Help() {
 								friends. This may include tasks like cleaning the house, doing
 								laundry, grocery shopping, or paying bills.
 							</p>
+							<a
+								href="/services/daily-life"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4">
@@ -145,6 +208,27 @@ export default function Help() {
 								services for individuals with complex needs, requiring skilled
 								providers to manage significant physical or health conditions.
 							</p>
+							<a
+								href="/services/high-intensity-support"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4">
@@ -165,6 +249,27 @@ export default function Help() {
 								services assisting individuals with disabilities to find,
 								retain, and thrive in suitable employment.
 							</p>
+							<a
+								href="/services/employment-related-supports"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>

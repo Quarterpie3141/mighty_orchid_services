@@ -25,9 +25,10 @@ export default function Values() {
 					</p>
 				</div>
 				<div className="flex flex-wrap -mx-4 align">
+					{/* Care */}
 					<div className="w-full md:w-1/2 lg:w-1/4 px-4">
-						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
-							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg">
+						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200 flex flex-col">
+							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center">
 								<img
 									width={120}
 									height={120}
@@ -38,37 +39,54 @@ export default function Values() {
 							<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
 								Care
 							</h3>
-							<p className="text-coolGray-500 font-medium">
-								{`At MTOS, Care is central to our mission. We prioritize empathy and kindness, ensuring each individual's well-being is our top priority. From tailored support plans to attentive staff, we create a nurturing environment where everyone feels valued and supported on their journey to success.`}
+							<p className="text-coolGray-500 font-medium flex-grow">
+								At MTOS, Care is central to our mission. We prioritize empathy
+								and kindness, ensuring each individual's well-being is our top
+								priority. From tailored support plans to attentive staff, we
+								create a nurturing environment where everyone feels valued and
+								supported on their journey to success.
 							</p>
+							<a
+								href="/values/care"
+								className="mt-6 inline-block text-mto-blue hover:text-mto-orange font-medium transition-colors"
+							>
+								Learn more →
+							</a>
 						</div>
 					</div>
+					{/* Respect */}
 					<div className="w-full md:w-1/2 lg:w-1/4 px-4">
-						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
-							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg">
+						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200 flex flex-col">
+							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center">
 								<img
 									width={120}
 									height={120}
 									src={"/values/Respect.png"}
-									className=""
 									alt="respect"
 								/>
 							</div>
 							<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
 								Respect
 							</h3>
-							<p className="text-coolGray-500 font-medium pt-4">
+							<p className="text-coolGray-500 font-medium flex-grow">
 								At MTOS, Respect is paramount. We prioritize listening,
 								understanding, and honoring the rights and choices of every
 								individual we care for. By fostering inclusivity and valuing
 								diversity, we create a culture of mutual respect within our
 								community.
 							</p>
+							<a
+								href="/values/respect"
+								className="mt-6 inline-block text-mto-blue hover:text-mto-orange font-medium transition-colors"
+							>
+								Learn more →
+							</a>
 						</div>
 					</div>
+					{/* Accountability */}
 					<div className="w-full md:w-1/2 lg:w-1/4 px-4">
-						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
-							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg">
+						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200 flex flex-col">
+							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center">
 								<img
 									width={130}
 									height={130}
@@ -79,33 +97,46 @@ export default function Values() {
 							<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
 								Accountability
 							</h3>
-							<p className="text-coolGray-500 font-medium">
+							<p className="text-coolGray-500 font-medium flex-grow">
 								At MTOS, Accountability is key. We take ownership, prioritize
 								transparency, and strive for excellence in all we do. Through
 								clear communication and proactive problem-solving, we guarantee
 								reliability and trustworthiness in every interaction.
 							</p>
+							<a
+								href="/values/accountability"
+								className="mt-6 inline-block text-mto-blue hover:text-mto-orange font-medium transition-colors"
+							>
+								Learn more →
+							</a>
 						</div>
 					</div>
+					{/* Collaboration */}
 					<div className="w-full md:w-1/2 lg:w-1/4 px-4">
-						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
-							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center text-white bg-transparent rounded-lg">
+						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200 flex flex-col">
+							<div className="inline-flex h-18 w-18 mb-6 mx-auto items-center justify-center">
 								<img
 									width={130}
 									height={130}
 									src={"/values/Collaboration.png"}
-									alt="Collabaration"
+									alt="Collaboration"
 								/>
 							</div>
 							<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
 								Collaboration
 							</h3>
-							<p className="text-coolGray-500 font-medium">
+							<p className="text-coolGray-500 font-medium flex-grow">
 								At MTOS, Collaboration is key. We believe in teamwork, open
 								communication, and leveraging diverse expertise to achieve
 								success. By working together, we drive innovation and maximize
 								our impact for positive change.
 							</p>
+							<a
+								href="/values/collaboration"
+								className="mt-6 inline-block text-mto-blue hover:text-mto-orange font-medium transition-colors"
+							>
+								Learn more →
+							</a>
 						</div>
 					</div>
 				</div>

@@ -8,3 +8,4 @@ export { default as FAQ } from "./FAQ";
 export { default as ContactForm } from "./ContactForm";
 export { default as Footer } from "./Footer";
 export { default as FeedbackForm } from "./FeedbackForm";
+export { default as MeetTheTeam } from "./MeetTheTeam";

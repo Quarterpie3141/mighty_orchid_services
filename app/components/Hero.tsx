@@ -1,7 +1,5 @@
-"use client";
-import { AnimatePresence, motion } from "framer-motion";
 import type React from "react";
-import { useEffect, useState } from "react";
+import Collage from "./subcomonents/Collage";
 
 // collage images to cyle through
 const collage_images = [
@@ -50,16 +48,6 @@ const collage_images = [
 ];
 
 export default function Hero() {
-	//delays the start of the animation so images can load
-	const [animate, setAnimate] = useState(false);
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setAnimate(true);
-		}, 3000);
-
-		return () => clearInterval(interval);
-	}, []);
-
 	return (
 		<section>
 			<div className="py-15 md:py-20">
@@ -111,49 +99,12 @@ export default function Hero() {
 									src="svg/dots3-blue.svg"
 									alt=""
 								/>
-								<Collage items={collage_images} animate={animate} />
+								<Collage items={collage_images} />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-	);
-}
-
-interface CollageProps {
-	items: React.ReactNode[];
-	animate: boolean;
-}
-
-function Collage({ items, animate }: CollageProps) {
-	const [currentItem, setCurrentItem] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			if (animate) {
-				setCurrentItem((prevItem) => (prevItem + 1) % items.length);
-			}
-		}, 12000);
-
-		return () => clearInterval(interval);
-	}, [items.length, animate]);
-
-	return (
-		<div className="collage-container relative overflow-hidden lg:h-[35rem] md:h-[17rem] h-[18rem]">
-			<AnimatePresence mode={"wait"}>
-				<motion.div
-					key={currentItem}
-					layout
-					initial={{ opacity: 0, scale: 0.9 }}
-					animate={{ opacity: 1, scale: 1 }}
-					exit={{ opacity: 0, scale: 0.9 }}
-					transition={{ duration: 1.3, ease: "easeInOut" }}
-				>
-					{items[currentItem]}
-				</motion.div>
-			</AnimatePresence>
-			<div className=" h-0 w-0">{items[currentItem + 1]}</div>
-		</div>
 	);
 }
