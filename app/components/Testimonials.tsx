@@ -19,7 +19,9 @@ export default function Testimonials() {
 						{`Discover what our participants have to say about their journey with us. Through their stories, you'll gain insight into the impact of our support and the transformative experiences our participants have undergone. From overcoming challenges to achieving milestones, these testimonials showcase the real-life successes of individuals within our community.`}
 					</p>
 				</div>
+
 				<div className="flex flex-wrap -mx-4 justify-center">
+					{/* === TESTIMONIAL 1 === */}
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
 						<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
 							<h3 className="pb-14 mb-auto text-lg md:text-xl font-medium">
@@ -41,6 +43,8 @@ export default function Testimonials() {
 							</p>
 						</div>
 					</div>
+
+					{/* === TESTIMONIAL 2 === */}
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
 						<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
 							<h3 className="pb-14 mb-auto text-xl md:text-2xl font-medium">
@@ -50,6 +54,8 @@ export default function Testimonials() {
 							<p className="text-lg text-coolGray-400">Participant</p>
 						</div>
 					</div>
+
+					{/* === TESTIMONIAL 3 === */}
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
 						<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
 							<h3 className="pb-14 mb-auto text-lg md:text-xl font-medium">
@@ -69,6 +75,8 @@ export default function Testimonials() {
 							<p className="text-lg text-coolGray-400">{`Participant's Family Member`}</p>
 						</div>
 					</div>
+
+					{/* === TESTIMONIAL 4 === */}
 					<div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 lg:mb-0">
 						<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
 							<h3 className="pb-14 mb-auto text-xl md:text-xl font-medium">
@@ -94,24 +102,25 @@ export default function Testimonials() {
 							</p>
 						</div>
 					</div>
-					<div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 md:mb-0 hidden">
+
+					{/* === NEW TESTIMONIAL (Condensed) === */}
+					<div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
 						<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
-							<h3 className="pb-14 mb-auto text-xl md:text-2xl font-medium">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							<h3 className="pb-14 mb-auto text-lg md:text-xl font-medium">
+								{`"Since engaging with Mighty Orchid Services (MTO) for the support of my two sons, Lee and Nijel, our journey has been truly transformative. From the very beginning, MTO has shown care, compassion, and understanding beyond anything we’ve experienced before.`}
+								<br />
+								<br />
+								{
+									"During difficult times, the Mighty Orchid Team stood by our side — offering comfort, consistency, and unwavering support. Their empathy and respect for our family and culture have made an incredible difference in our lives."
+								}
+								<br />
+								<br />
+								{`The support we’ve received has been healing and genuine. MTO has become more than a provider — they are our anchor, our safe space, and our extended family."`}
 							</h3>
-							<h4 className="mb-1 text-lg font-semibold">John Doe</h4>
-							<p className="text-lg text-coolGray-400">Backend Developer</p>
-						</div>
-					</div>
-					<div className="w-full md:w-1/2 lg:w-1/3 px-4 hidden">
-						<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md">
-							<h3 className="pb-14 mb-auto text-xl md:text-2xl font-medium">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</h3>
-							<h4 className="mb-1 text-lg font-semibold">John Doe</h4>
-							<p className="text-lg text-coolGray-400">Product Designer</p>
+							<h4 className="mb-1 text-lg font-semibold">
+								- Participant’s Family Member
+							</h4>
+							<p className="text-lg text-coolGray-400">{`Participant's Family`}</p>
 						</div>
 					</div>
 				</div>

@@ -61,12 +61,6 @@ export default function Home() {
 							link="/respite/houses/35-Mujira-Ramble-Baynton"
 						/>
 						<HouseCard
-							image="https://cdn.mtos.com.au/images/respite-houses/39B-delambre-drive-nickol/cover.jpeg"
-							name="Delambre Drive, Nickol"
-							address="39B Delambre Drive, Nickol"
-							link="/respite/houses/39B-Delambre-Drive-Nickol"
-						/>
-						<HouseCard
 							image="https://cdn.mtos.com.au/images/respite-houses/7a-jennifer-court-pegscreek/cover.jpeg"
 							name="Jennifer Court Pegscreek"
 							address="7A Jennifer Court Pegscreek"
@@ -75,7 +69,7 @@ export default function Home() {
 						<HouseCard
 							image="https://cdn.mtos.com.au/images/respite-houses/39E-delambre-drive-nickol/cover.jpeg"
 							name="Delambre Drive Nickol"
-							address="139E-delambre-drive-nickol"
+							address="39E Delambre Drive Nickol"
 							link="/respite/houses/39E-Delambre-Drive-Nickol"
 						/>
 					</div>

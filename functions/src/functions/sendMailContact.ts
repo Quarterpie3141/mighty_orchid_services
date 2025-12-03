@@ -4,7 +4,7 @@ import { corsHandler, mailjet } from "./common";
 export const sendMailContact = functions.https.onRequest(
 	(request, response) => {
 		corsHandler(request, response, () => {
-			const secret = "" as string;
+			const secret = "6LfVA-oqAAAAAJebYeOGrgYiLt02itQMIja_yndu" as string;
 			const now = new Date();
 
 			const senderEmail = request.body.email;

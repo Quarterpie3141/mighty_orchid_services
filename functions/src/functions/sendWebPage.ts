@@ -1,11 +1,10 @@
 import axios from "axios";
 import * as functions from "firebase-functions/v2";
-import { corsHandler } from "./common";
-const API_KEY =
-	"";
+import { corsHandler, API_KEY } from "./common";
+
 export const sendWebPage = functions.https.onRequest((request, response) => {
 	corsHandler(request, response, () => {
-		const secret = "" as string;
+		const secret = "6LfVA-oqAAAAAJebYeOGrgYiLt02itQMIja_yndu" as string;
 
 		const captchaResponse = request.body.token;
 		const remoteip = request.ip;

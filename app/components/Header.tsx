@@ -56,7 +56,7 @@ export default function Header() {
 	// Main navigation items (excluding "More")
 	const navItems = [
 		["Our Services", "/#services"],
-		["About us", "/#values"],
+		["About us", "/team"],
 		["Events", "/events"],
 		["Referrals", "/referrals/#"],
 	];

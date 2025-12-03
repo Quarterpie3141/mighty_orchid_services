@@ -28,24 +28,23 @@ export default function Home() {
 								39E Delambre Drive Nickol
 							</h1>
 							<h1 className="text-xl">
-								Welcome to 39E Delambre Drive, Nickol—a home designed to offer
-								the perfect combination of style, comfort, and inclusivity.
-								Situated in a vibrant and welcoming community, this property
-								features modern interiors and practical layouts tailored for
-								easy living.
+								Welcome to 39E Delambre Drive, Nickol. This property is designed
+								to provide a comfortable, accessible, and practical living
+								environment for participants. Both the interior and exterior
+								spaces support ease of movement and independence.
 								<br />
 								<br />
-								Accessibility is at the heart of this home, with
-								disability-friendly features including wide hallways, and
-								thoughtfully planned spaces that prioritize ease of movement and
-								convenience. Whether relaxing indoors or enjoying the outdoor
-								areas, every detail has been designed to create a space where
-								everyone feels at home.
+								The home includes SDA-style bathrooms and toilets, a brand-new
+								electric bed, and a spacious layout suitable for a wide range of
+								mobility needs. Modern amenities are incorporated throughout to
+								ensure safety, usability, and overall comfort.
 								<br />
 								<br />
-								Explore the beauty and functionality of this remarkable property
-								through our Photo Gallery below. Discover why 39E Delambre Drive
-								is more than just a house—it’s a place to call home.
+								Please explore the Photo Gallery below for a clearer
+								understanding of the property’s layout and features. This
+								information is provided to help you assess whether 39E Delambre
+								Drive may meet your accessibility and accommodation
+								requirements.
 							</h1>
 						</div>
 						<div className="w-5/6 max-w-[50rem] md:min-w-[20rem] min-w-[10rem]">
