@@ -47,7 +47,9 @@ export default function Home() {
 			<Testimonials />
 			{/* Meet the team */}
 			{/* Contact us*/}
-			<ContactForm />
+			<section id="contact">
+				<ContactForm />
+			</section>
 			{/* FAQ */}
 			<FAQ />
 			{/* Footer */}

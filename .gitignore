@@ -42,3 +42,5 @@ next-env.d.ts
 
 #puppeteer chrome cache
 functions/.cache
+
+*common.ts

@@ -29,14 +29,6 @@ export default function TeamCard({ member }: { member: TeamMember }) {
 					<span className="inline-block mb-2 text-lg font-medium text-mto-orange">
 						{member.position}
 					</span>
-					<div className="flex items-center justify-center">
-						<a
-							className="text-sm text-coolGray-500 hover:text-coolGray-700 underline"
-							href={`mailto:${member.email}`}
-						>
-							{member.email}
-						</a>
-					</div>
 				</div>
 			</a>
 		</div>

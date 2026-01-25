@@ -1,85 +1,88 @@
-"use client";
-import { AnimatePresence, motion } from "framer-motion";
-import { Rubik_Dirt } from "next/font/google";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Footer, Header } from "../components";
+import { events, type EventItem } from "./eventsData";
 
-const anton = Rubik_Dirt({
-	subsets: ["latin"],
-	weight: "400", // Specify the font weight(s) you need
-});
+export const metadata = {
+	title: "Events | Mighty Orchid Services",
+	description:
+		"Upcoming and past events from Mighty Orchid Services — community days, employment forums, workshops and more in the Pilbara.",
+};
 
-export default function Careers() {
+export default function EventsPage() {
+	const eventsByYear = events.reduce(
+		(acc, event) => {
+			const year = new Date(event.date).getFullYear();
+			if (!acc[year]) acc[year] = [];
+			acc[year].push(event);
+			return acc;
+		},
+		{} as Record<number, typeof events>,
+	);
+
+	const sortedYears = Object.keys(eventsByYear).sort(
+		(a, b) => Number(b) - Number(a),
+	);
+
 	return (
 		<>
-			{/* Header */}
 			<Header />
-			{/* Careers */}
-			<section
-				className=" py-52 md:py-58 bg-white"
-				style={{
-					backgroundImage: 'url("../bg-gradient.png")',
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
-				}}
-				id="careers"
-			>
-				<div className="bg-mto-blue w-4/5 m-auto rounded-3xl h-[100vh] md:h-[75vh] flex items-center flex-col md:flex-row">
-					<div className="md:w-1/2 h-max flex justify-center">
-						<img
-							className="rounded-lg w-full max-w-72 h-auto md:max-w-[28rem] md:h-auto mt-10 md:mt-0"
-							src="/events/international-day-of-people-with-disability.jpeg"
-							alt="event-poster"
-						/>
-					</div>
-					<div className="md:w-1/2 h-max flex">
-						<div className="h-auto m-auto w-10/12">
-							<h1
-								className={`text-white text-4xl md:text-5xl ${anton.className}`}
-							>
-								The International Day Of People With Disabilities
-							</h1>
-							<div className="rounded-xl bg-mto-orange w-max px-3">
-								<h1 className="text-white text-sm md:text-md font-bold">
-									3rd December 2024
-								</h1>
+			<main className="pt-36 pb-24 bg-white">
+				<section className="container mx-auto px-4 max-w-6xl">
+					<h1 className="text-4xl font-bold text-mto-blue mb-6">Events</h1>
+					<p className="text-lg text-coolGray-600 mb-8">
+						See upcoming and recent events hosted or supported by Mighty Orchid
+						Services. Click any event for details and how to get involved.
+					</p>
+
+					{sortedYears.map((year, yearIndex) => (
+						<div key={year}>
+							{yearIndex > 0 && <hr className="my-12 border-gray-300" />}
+							<h2 className="text-2xl font-semibold text-mto-blue mb-6">
+								{year}
+							</h2>
+							<div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+								{eventsByYear[Number(year)].map((ev: EventItem) => (
+									<article
+										key={ev.slug}
+										className="rounded-lg border overflow-hidden shadow-sm"
+									>
+										<Link href={`/events/${ev.slug}`} className="block">
+											<img
+												src={ev.image}
+												alt={ev.title}
+												className="w-full h-44 object-cover"
+												loading="lazy"
+											/>
+											<div className="p-4">
+												<h3 className="text-xl font-semibold text-mto-blue mb-2">
+													{ev.title}
+												</h3>
+												<p className="text-sm text-coolGray-500 mb-3">
+													<strong className="text-coolGray-700">
+														{ev.date}
+													</strong>
+													{ev.time ? ` • ${ev.time}` : ""}
+												</p>
+												<p className="text-coolGray-600 text-sm">
+													{ev.excerpt}
+												</p>
+											</div>
+										</Link>
+										<div className="p-3 border-t bg-gray-50 text-right">
+											<Link
+												href={`/events/${ev.slug}`}
+												className="text-mto-orange font-medium underline"
+											>
+												View details
+											</Link>
+										</div>
+									</article>
+								))}
 							</div>
-							<h1 className="text-white text-sm md:text-lg font-bold my-4">
-								Join us to celebrate the International Day of People with
-								Disabilities! 🎉
-							</h1>
-							<div className="w-full ml-0 md:ml-4">
-								<h1 className="text-white text-sm md:text-lg font-bold">
-									📅 When: Tuesday, 3rd December 2024
-								</h1>
-								<h1 className="text-white text-sm md:text-lg font-bold">
-									⏰ Time: 10:00 AM – 2:00 PM
-								</h1>
-								<h1 className="text-white text-sm md:text-lg font-bold mb-4">
-									📍 Where: Tambrey Pavilion, Lot 4227 Tambrey Dr, Nickol WA
-								</h1>
-							</div>
-							<h1 className="text-white text-sm md:text-lg font-bold mb-4">
-								Come along to enjoy a community expo filled with fun,
-								connection, and support. A free lunch will be served from 12:00
-								PM to 1:00 PM 🍴.
-							</h1>
-							<h1 className="text-white text-sm md:text-lg font-bold mb-4">
-								This event is hosted by Good Turn Services and Mighty Orchid
-								Services, with support from amazing local organizations. It's a
-								great opportunity to meet people, explore services, and
-								celebrate inclusion and diversity.
-							</h1>
-							<h1 className="text-white text-sm md:text-lg font-bold mb-4">
-								Feel free to reach out if you’d like more info or to book a
-								stall! Hope to see you there! 😊
-							</h1>
 						</div>
-					</div>
-				</div>
-			</section>
-			{/* Footer */}
+					))}
+				</section>
+			</main>
 			<Footer />
 		</>
 	);
