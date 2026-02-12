@@ -36,7 +36,7 @@ export default function Home() {
 			<section
 				className="pt-24 bg-white bg-fixed"
 				style={{
-					backgroundImage: 'url("https://i.imgur.com/sCLl6U6.png")',
+					backgroundImage: 'url("other-assets/stock/people-coffee.jpg")',
 					backgroundPosition: "top",
 					backgroundSize: "cover",
 				}}

@@ -46,7 +46,7 @@ export default function MeetTheTeam() {
 					{/* Image block */}
 					<div className="relative">
 						<Image
-							src="/stock/pexels-vlada-karpovich-7433822.jpg"
+							src="/team-assets/full-team.webp"
 							alt="Our team"
 							width={600}
 							height={400}

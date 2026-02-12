@@ -43,4 +43,5 @@ next-env.d.ts
 #puppeteer chrome cache
 functions/.cache
 
+# Ignore local functions secret file
 functions/src/functions/common.ts

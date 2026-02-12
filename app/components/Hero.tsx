@@ -5,44 +5,50 @@ import Collage from "./subcomonents/Collage";
 const collage_images = [
 	<img
 		key={"0"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C0.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C0.webp"
 		alt=""
 	/>,
 	<img
 		key={"1"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C1.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C1.webp"
 		alt=""
 	/>,
 	<img
 		key={"2"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C2.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C2.webp"
 		alt=""
 	/>,
 	<img
 		key={"3"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C3.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C3.webp"
 		alt=""
 	/>,
 	<img
 		key={"4"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C4.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C4.webp"
 		alt=""
 	/>,
 	<img
 		key={"5"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C5.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C5.webp"
 		alt=""
 	/>,
 	<img
 		key={"6"}
-		className="relative rounded-3xl h-auto"
-		src="https://cdn.mtos.com.au/images/collage-content/C6.png"
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C6.webp"
+		alt=""
+	/>,
+	<img
+		key={"7"}
+		className="relative rounded-3xl w-full h-full object-cover"
+		src="https://cdn.mtos.com.au/images/collage-content/C7.webp"
 		alt=""
 	/>,
 ];

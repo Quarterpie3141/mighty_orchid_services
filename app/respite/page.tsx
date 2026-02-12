@@ -38,7 +38,7 @@ export default function Home() {
 						</div>
 						<div className="w-5/6 max-w-[50rem] md:min-w-[20rem] min-w-[10rem]">
 							<img
-								src="https://cdn.mtos.com.au/images/respite-houses/cover.jpg"
+								src="https://cdn.mtos.com.au/images/respite-houses/39E-delambre-drive-nickol/cover.jpeg"
 								className=" h-auto w-auto rounded-3xl m-8"
 								alt=""
 							/>

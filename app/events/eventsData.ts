@@ -81,15 +81,15 @@ export const events: EventItem[] = [
 		seoTitle:
 			"Event Recap: International Day of People With Disability 2025 — Mighty Orchid Services",
 		seoDescription:
-			"A detailed look back at the 2025 IDPWD event in Karratha, celebrating community connection, local support, and disability awareness at the Tambrey Pavilion.",
+			"A detailed look back at the 2025 IDPWD event in Karratha, celebrating community connection, local support, and disability awareness at the Red Earth Arts Precint.",
 		date: "2025-12-03",
 		time: "10:00 AM – 3:00 PM",
-		location: "Tambrey Pavilion, Karratha",
+		location: "Red Earth Arts Precint, Karratha",
 		image: "/event-assets/idpwd2025/OITQ7413.JPG",
 		excerpt:
-			"We look back at a wonderful day at the Tambrey Pavilion, where the Karratha community united to celebrate ability, share resources, and foster genuine connections.",
+			"We look back at a wonderful day at the Red Earth Arts Precint, where the Karratha community united to celebrate ability, share resources, and foster genuine connections.",
 		content:
-			"On December 3rd, the Tambrey Pavilion in Karratha came alive with the spirit of community and inclusion. Mighty Orchid Services was proud to host the 2025 International Day of People With Disability (IDPWD), creating a welcoming space for residents to connect, learn, and celebrate. It was more than just an expo; it was a vibrant testament to the strength and diversity of the Pilbara region, bringing together people from all walks of life to recognize the contributions and achievements of people with disability.",
+			"On December 3rd, the Red Earth Arts Precint in Karratha came alive with the spirit of community and inclusion. Mighty Orchid Services was proud to sponsor the 2025 International Day of People With Disability (IDPWD), contributing to a welcoming space for residents to connect, learn, and celebrate. It was more than just an expo; it was a vibrant testament to the strength and diversity of the Pilbara region, bringing together people from all walks of life to recognize the contributions and achievements of people with disability.",
 		contentBlocks: [
 			{
 				type: "paragraph" as const,
@@ -105,7 +105,7 @@ export const events: EventItem[] = [
 			},
 			{
 				type: "paragraph" as const,
-				text: "True to the Pilbara way of life, hospitality played a central role in the event's success. A free lunch was provided, offering a moment for everyone to pause, break bread together, and forge new friendships in a relaxed and supportive environment. We are incredibly grateful to the local organizations that lent their support and to every community member who attended. Your participation turned a simple date on the calendar into a meaningful celebration of unity.",
+				text: "True to the Pilbara way of life, hospitality played a central role in the event's success. A free lunch was sponsored by Yara, offering a moment for everyone to pause, break bread together, and forge new friendships in a relaxed and supportive environment. We are incredibly grateful to the local organizations that lent their support and to every community member who attended. Your participation turned a simple date on the calendar into a meaningful celebration of unity.",
 			},
 			{
 				type: "image" as const,
@@ -153,65 +153,69 @@ export const events: EventItem[] = [
 		registrationLink: "",
 		gallery: [],
 	},
-{
-  "slug": "karratha-hedland-perth-christmas-party",
-  "title": "Christmas Celebration: Karratha, Hedland & Perth",
-  "seoTitle": "Event Recap: 2025 Christmas Party — Mighty Orchid Services",
-  "seoDescription": "A look back at our simultaneous Christmas celebrations in Perth and the Pilbara, bringing our teams and community together.",
-  "date": "2025-12-20",
-  "time": "6:00 PM – 9:00 PM",
-  "location": "Karratha, Hedland & Perth Venues",
-  "image": "/event-assets/christmasparty2025/IMG_2746.JPG",
-  "excerpt": "A wonderful evening celebrating the end of the year with our teams and families across Western Australia.",
-  "content": "On December 20th, Mighty Orchid Services came together for simultaneous celebrations in Perth and Karratha. It was a special opportunity to close out the year and connect our teams from the Pilbara to the city in one shared moment.",
-  "contentBlocks": [
-    {
-      "type": "paragraph" as const,
-      "text": "The heart of the evening was about connection. By hosting events at the same time in both locations, we were able to bridge the distance and celebrate as one big team, reminding us all that we're part of the same supportive community no matter the postcode."
-    },
-    {
-      "type": "image" as const,
-      "src": "/event-assets/christmasparty2025/IMG_2746.JPG",
-      "alt": "Group photo of attendees at the Karratha and Perth venues",
-      "caption": "Everyone gathering together to celebrate the year",
-      "fullWidth": true
-    },
-    {
-      "type": "paragraph" as const,
-      "text": "The vibe was relaxed and fun, a well-deserved break after a busy year. With great music and plenty of laughs, it was a chance for staff and families to kick back, leave the work talk behind, and just enjoy each other's company."
-    },
-    {
-      "type": "image" as const,
-      "src": "/event-assets/christmasparty2025/OVKM6845.JPG",
-      "alt": "Attendees dancing and socializing",
-      "caption": "Good times at the office",
-      "fullWidth": false
-    },
-    {
-      "type": "paragraph" as const,
-      "text": "Of course, it wouldn't be a Christmas party without a feast. We shared a fantastic meal with plenty of options for everyone, making sure nobody went home hungry."
-    },
-    {
-      "type": "image" as const,
-      "src": "/event-assets/christmasparty2025/VASS0053.JPG",
-      "alt": "Buffet spread of Christmas food",
-      "caption": "Dinner is served!",
-      "fullWidth": false
-    },
-    {
-      "type": "paragraph" as const,
-      "text": "The best part of the night was seeing our staff and the people we support simply hanging out as friends. It’s moments like these, chatting, laughing, and celebrating together, that build the genuine trust and relationships we value so much."
-    },
-    {
-      "type": "image" as const,
-      "src": "/event-assets/christmasparty2025/RKYV7771.PNG",
-      "alt": "Employees talking with clients",
-      "caption": "Catching up with the community we support",
-      "fullWidth": false
-    }
-  ],
-  "registrationLink": "",
-  "gallery": []
-}].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+	{
+		slug: "karratha-hedland-perth-christmas-party",
+		title: "Christmas Celebration: Karratha, Hedland & Perth",
+		seoTitle: "Event Recap: 2025 Christmas Party — Mighty Orchid Services",
+		seoDescription:
+			"A look back at our simultaneous Christmas celebrations in Perth and the Pilbara, bringing our teams and community together.",
+		date: "2025-12-20",
+		time: "6:00 PM – 9:00 PM",
+		location: "Karratha, Hedland & Perth Venues",
+		image: "/event-assets/christmasparty2025/IMG_2746.JPG",
+		excerpt:
+			"A wonderful evening celebrating the end of the year with our teams and families across Western Australia.",
+		content:
+			"On December 20th, Mighty Orchid Services came together for simultaneous celebrations in Perth and Karratha. It was a special opportunity to close out the year and connect our teams from the Pilbara to the city in one shared moment.",
+		contentBlocks: [
+			{
+				type: "paragraph" as const,
+				text: "The heart of the evening was about connection. By hosting events at the same time in both locations, we were able to bridge the distance and celebrate as one big team, reminding us all that we're part of the same supportive community no matter the postcode.",
+			},
+			{
+				type: "image" as const,
+				src: "/event-assets/christmasparty2025/IMG_2746.JPG",
+				alt: "Group photo of attendees at the Karratha and Perth venues",
+				caption: "Everyone gathering together to celebrate the year",
+				fullWidth: true,
+			},
+			{
+				type: "paragraph" as const,
+				text: "The vibe was relaxed and fun, a well-deserved break after a busy year. With great music and plenty of laughs, it was a chance for staff and families to kick back, leave the work talk behind, and just enjoy each other's company.",
+			},
+			{
+				type: "image" as const,
+				src: "/event-assets/christmasparty2025/OVKM6845.JPG",
+				alt: "Attendees dancing and socializing",
+				caption: "Good times at the office",
+				fullWidth: false,
+			},
+			{
+				type: "paragraph" as const,
+				text: "Of course, it wouldn't be a Christmas party without a feast. We shared a fantastic meal with plenty of options for everyone, making sure nobody went home hungry.",
+			},
+			{
+				type: "image" as const,
+				src: "/event-assets/christmasparty2025/VASS0053.JPG",
+				alt: "Buffet spread of Christmas food",
+				caption: "Dinner is served!",
+				fullWidth: false,
+			},
+			{
+				type: "paragraph" as const,
+				text: "The best part of the night was seeing our staff and the people we support simply hanging out as friends. It’s moments like these, chatting, laughing, and celebrating together, that build the genuine trust and relationships we value so much.",
+			},
+			{
+				type: "image" as const,
+				src: "/event-assets/christmasparty2025/RKYV7771.PNG",
+				alt: "Employees talking with clients",
+				caption: "Catching up with the community we support",
+				fullWidth: false,
+			},
+		],
+		registrationLink: "",
+		gallery: [],
+	},
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export default events;
