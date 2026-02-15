@@ -30,9 +30,9 @@ export default function Home() {
 							<h1 className="text-xl">
 								Welcome to 35 Mujira Ramble, Baynton—a sanctuary of modern
 								living designed with comfort, style, and accessibility in mind.
-								This property showcases carefully planned interiors,
-								spacious layouts, and thoughtful features that cater to a
-								variety of needs.
+								This property showcases carefully planned interiors, spacious
+								layouts, and thoughtful features that cater to a variety of
+								needs.
 								<br />
 								<br />
 								Designed for inclusivity, the house boasts disability-friendly

@@ -1,4 +1,5 @@
 import {
+	CollaboratingWith,
 	ContactForm,
 	FAQ,
 	Footer,
@@ -32,6 +33,8 @@ export default function Home() {
 			{/* Values */}
 			<Values />
 			<MeetTheTeam />
+			{/* Collaborating With */}
+			<CollaboratingWith />
 			{/* Parralax  */}
 			<section
 				className="pt-24 bg-white bg-fixed"

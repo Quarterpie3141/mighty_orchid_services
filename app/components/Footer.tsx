@@ -115,6 +115,15 @@ export default function Footer() {
 						height={120}
 					/>
 				</a>
+				<a href="https://phcci.com.au/">
+					<Image
+						className="w-72 p-5 mt-10"
+						src={"https://mtos.com.au/other-assets/PHCCI.png"}
+						alt="PHCCI Logo"
+						width={124}
+						height={141}
+					/>
+				</a>
 				<a href="https://www.onslowcci.com.au/">
 					<Image
 						className="w-72 p-5 mt-10"
