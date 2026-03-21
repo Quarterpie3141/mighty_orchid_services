@@ -56,17 +56,18 @@ export default function Header() {
 	// Main navigation items (excluding "More")
 	const navItems = [
 		["Our Services", "/#services"],
-		["About us", "/team"],
-		["Events", "/events"],
+		["About us", "/#values"],
+		["Our Team", "/#team"],
 		["Referrals", "/referrals/#"],
 	];
 
 	// Items within the "More" dropdown
 	const moreItems = [
 		["FAQs", "/#FAQ"],
+		["Events", "/events"],
 		["Careers", "/careers"],
 		["Values", "/values"],
-		["Policies", "/policies"],
+		//		["Policies", "/policies"],
 	];
 
 	return (

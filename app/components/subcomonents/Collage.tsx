@@ -19,20 +19,22 @@ type CollageProps = {
 export default function Collage({
 	items,
 	startIndex = 0,
-	initialDelayMs = 800, // shorter, feels snappier; change if you truly need 3s
-	intervalMs = 12000,
+	initialDelayMs = 0,
+	intervalMs = 3000,
 	autoplay = true,
 	pauseOnHover = true,
 }: CollageProps) {
 	const n = items.length;
 	const safeStart = n > 0 ? ((startIndex % n) + n) % n : 0;
 
-	const containerRef = useRef<HTMLDivElement | null>(null);
-	const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-	const delayRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+	const startDelayTimeoutRef = useRef<number | null>(null);
+	const tickTimeoutRef = useRef<number | null>(null);
+	const nextTickAtRef = useRef<number | null>(null);
+	const remainingToNextTickRef = useRef<number>(intervalMs);
 	const [index, setIndex] = useState(safeStart);
-	const [running, setRunning] = useState(false); // becomes true after visible + delay
+	const [ready, setReady] = useState(initialDelayMs <= 0);
 	const [hovering, setHovering] = useState(false);
+	const [pageHidden, setPageHidden] = useState(false);
 
 	// Respect reduced motion
 	const prefersReducedMotion = usePrefersReducedMotion();
@@ -44,53 +46,121 @@ export default function Collage({
 
 	// If items list changes length, keep index valid
 	useEffect(() => {
-		setIndex((i) => (n > 0 ? i % n : 0));
+		setIndex((i) => (n > 0 ? ((i % n) + n) % n : 0));
 	}, [n]);
 
-	// Start only when the collage is visible (IntersectionObserver)
+	// Keep index aligned when startIndex changes
 	useEffect(() => {
-		const el = containerRef.current;
-		if (!el) return;
+		setIndex(safeStart);
+	}, [safeStart]);
 
-		let visible = false;
-		const io = new IntersectionObserver(
-			([entry]) => {
-				const nowVisible = !!entry?.isIntersecting;
-				if (nowVisible && !visible) {
-					// kick off after the initial delay
-					clearTimeout(delayRef.current as any);
-					delayRef.current = setTimeout(() => setRunning(true), initialDelayMs);
-				}
-				visible = nowVisible;
-				if (!nowVisible) {
-					setRunning(false);
-					clearInterval(timerRef.current as any);
-				}
-			},
-			{ threshold: 0.25 }, // start when at least 25% in view
+	// Pause when tab is not visible to avoid browser timer throttling side-effects.
+	useEffect(() => {
+		const onVisibilityChange = () => {
+			setPageHidden(document.visibilityState !== "visible");
+		};
+
+		onVisibilityChange();
+		document.addEventListener("visibilitychange", onVisibilityChange);
+		return () =>
+			document.removeEventListener("visibilitychange", onVisibilityChange);
+	}, []);
+
+	// Start rotation after a deterministic initial delay.
+	useEffect(() => {
+		if (startDelayTimeoutRef.current !== null) {
+			window.clearTimeout(startDelayTimeoutRef.current);
+			startDelayTimeoutRef.current = null;
+		}
+
+		if (!autoplay || n <= 1) {
+			setReady(false);
+			return;
+		}
+
+		if (initialDelayMs <= 0) {
+			setReady(true);
+			return;
+		}
+
+		setReady(false);
+		startDelayTimeoutRef.current = window.setTimeout(() => {
+			setReady(true);
+		}, initialDelayMs);
+
+		return () => {
+			if (startDelayTimeoutRef.current !== null) {
+				window.clearTimeout(startDelayTimeoutRef.current);
+				startDelayTimeoutRef.current = null;
+			}
+		};
+	}, [autoplay, n, initialDelayMs]);
+
+	// Rotation timer with drift correction and pause/resume support.
+	useEffect(() => {
+		const paused = (pauseOnHover && hovering) || pageHidden;
+		const shouldRun = autoplay && ready && n > 1 && !paused;
+
+		if (tickTimeoutRef.current !== null) {
+			window.clearTimeout(tickTimeoutRef.current);
+			tickTimeoutRef.current = null;
+		}
+
+		if (!shouldRun) {
+			if (nextTickAtRef.current !== null) {
+				remainingToNextTickRef.current = Math.max(
+					0,
+					nextTickAtRef.current - performance.now(),
+				);
+			}
+			return;
+		}
+
+		const scheduleNext = (delayMs: number) => {
+			const safeDelay = Math.max(0, delayMs);
+			nextTickAtRef.current = performance.now() + safeDelay;
+			tickTimeoutRef.current = window.setTimeout(() => {
+				const expectedTickAt = nextTickAtRef.current ?? performance.now();
+				const now = performance.now();
+				const drift = Math.max(0, now - expectedTickAt);
+
+				setIndex((i) => (i + 1) % n);
+				remainingToNextTickRef.current = intervalMs;
+				scheduleNext(Math.max(0, intervalMs - drift));
+			}, safeDelay);
+		};
+
+		scheduleNext(
+			Math.min(
+				intervalMs,
+				Math.max(0, remainingToNextTickRef.current || intervalMs),
+			),
 		);
 
-		io.observe(el);
 		return () => {
-			io.disconnect();
-			clearTimeout(delayRef.current as any);
-			clearInterval(timerRef.current as any);
+			if (tickTimeoutRef.current !== null) {
+				window.clearTimeout(tickTimeoutRef.current);
+				tickTimeoutRef.current = null;
+			}
 		};
-	}, [initialDelayMs]);
+	}, [autoplay, ready, n, intervalMs, hovering, pauseOnHover, pageHidden]);
 
-	// Rotation timer
+	// Reset next tick budget when interval changes.
 	useEffect(() => {
-		const shouldRun =
-			autoplay && running && n > 1 && !(pauseOnHover && hovering);
+		remainingToNextTickRef.current = intervalMs;
+	}, [intervalMs]);
 
-		clearInterval(timerRef.current as any);
-		if (shouldRun) {
-			timerRef.current = setInterval(() => {
-				setIndex((i) => (i + 1) % n);
-			}, intervalMs);
-		}
-		return () => clearInterval(timerRef.current as any);
-	}, [autoplay, running, n, intervalMs, hovering, pauseOnHover]);
+	// Cleanup all timers on unmount.
+	useEffect(() => {
+		return () => {
+			if (startDelayTimeoutRef.current !== null) {
+				window.clearTimeout(startDelayTimeoutRef.current);
+			}
+			if (tickTimeoutRef.current !== null) {
+				window.clearTimeout(tickTimeoutRef.current);
+			}
+		};
+	}, []);
 
 	// Compute next index for preloading & safe access
 	const nextIndex = useMemo(() => (index + 1) % n, [index, n]);
@@ -111,7 +181,6 @@ export default function Collage({
 
 	return (
 		<div
-			ref={containerRef}
 			className="collage-container relative overflow-hidden lg:h-[35rem] md:h-[17rem] h-[18rem]"
 			onMouseEnter={() => pauseOnHover && setHovering(true)}
 			onMouseLeave={() => pauseOnHover && setHovering(false)}

@@ -145,10 +145,6 @@ export const events: EventItem[] = [
 				caption: "Photo by Marc Mueller from Pexels",
 				fullWidth: false,
 			},
-			{
-				type: "paragraph" as const,
-				text: "This meeting marked the transition into active operations. With the administrative groundwork completed, the focus has now shifted to the day-to-day delivery of support services.",
-			},
 		],
 		registrationLink: "",
 		gallery: [],

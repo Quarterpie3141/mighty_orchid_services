@@ -172,8 +172,10 @@ export default function ContactForm() {
 										</h3>
 										<div className="text-base md:text-lg text-coolGray-500 font-normal space-y-1">
 											<p>
-												<span className="font-semibold">Main Office:</span> +61
-												8 5106 7301
+												<span className="font-semibold">
+													Main Karratha Office:
+												</span>{" "}
+												+61 8 5106 7301
 											</p>
 											<p>
 												<span className="font-semibold">Headland:</span> 0499

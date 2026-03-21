@@ -68,8 +68,7 @@ export default function Testimonials() {
 		};
 	}, [isAutoScrolling]);
 
-	const handleMouseEnter = () => setIsAutoScrolling(false);
-	const handleMouseLeave = () => setIsAutoScrolling(true);
+	const handleClick = () => setIsAutoScrolling((prev) => !prev);
 
 	return (
 		<section
@@ -94,8 +93,7 @@ export default function Testimonials() {
 
 				<div
 					ref={scrollContainerRef}
-					onMouseEnter={handleMouseEnter}
-					onMouseLeave={handleMouseLeave}
+					onClick={handleClick}
 					className="overflow-x-auto scrollbar-hide"
 					style={{
 						scrollbarWidth: "none",
@@ -115,7 +113,7 @@ export default function Testimonials() {
 							...testimonials,
 						].map((testimonial, index) => (
 							<div
-								key={testimonial.author}
+								key={`${testimonial.author}-${index}`}
 								className="flex-shrink-0 w-full md:w-96 lg:w-[28rem]"
 							>
 								<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md min-h-80">

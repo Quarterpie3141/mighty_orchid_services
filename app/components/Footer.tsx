@@ -105,33 +105,48 @@ export default function Footer() {
 					A proud member of:
 				</p>
 			</div>
-			<div className=" flex justify-center px-4 mx-auto">
-				<a href="https://kdcci.com.au/">
-					<Image
-						className="w-72 p-5 mr-40"
-						src={"https://mtos.com.au/other-assets/KDCCI.jpg"}
-						alt="KDCCI Logo"
-						width={200}
-						height={120}
-					/>
+			<div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 px-4 mx-auto pb-8">
+				<a
+					className="flex items-center justify-center"
+					href="https://kdcci.com.au/"
+				>
+					<div className="relative w-36 h-16 md:w-44 md:h-20">
+						<Image
+							className="object-contain"
+							src={"https://mtos.com.au/other-assets/KDCCI.jpg"}
+							alt="KDCCI Logo"
+							fill
+							sizes="(min-width: 768px) 176px, 144px"
+						/>
+					</div>
 				</a>
-				<a href="https://phcci.com.au/">
-					<Image
-						className="w-72 p-5 mt-10"
-						src={"https://mtos.com.au/other-assets/PHCCI.png"}
-						alt="PHCCI Logo"
-						width={124}
-						height={141}
-					/>
+				<a
+					className="flex items-center justify-center"
+					href="https://phcci.com.au/"
+				>
+					<div className="relative w-36 h-16 md:w-44 md:h-20">
+						<Image
+							className="object-contain"
+							src={"https://mtos.com.au/other-assets/PHCCI.png"}
+							alt="PHCCI Logo"
+							fill
+							sizes="(min-width: 768px) 176px, 144px"
+						/>
+					</div>
 				</a>
-				<a href="https://www.onslowcci.com.au/">
-					<Image
-						className="w-72 p-5 mt-10"
-						src={"https://mtos.com.au/other-assets/OCCI.svg"}
-						alt="OCCI Logo"
-						width={124}
-						height={141}
-					/>
+				<a
+					className="flex items-center justify-center"
+					href="https://www.onslowcci.com.au/"
+				>
+					<div className="relative w-36 h-16 md:w-44 md:h-20">
+						<Image
+							className="object-contain"
+							src={"https://mtos.com.au/other-assets/OCCI.svg"}
+							alt="OCCI Logo"
+							fill
+							sizes="(min-width: 768px) 176px, 144px"
+						/>
+					</div>
 				</a>
 			</div>
 		</section>
