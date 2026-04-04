@@ -2,13 +2,21 @@ const express = require("express");
 const multer = require("multer");
 const Docxtemplater = require("docxtemplater");
 const PizZip = require("pizzip");
-const libre = require("libreoffice-convert");
 const { PDFDocument } = require("pdf-lib");
 const fs = require("fs");
 const path = require("path");
 const os = require("os");
 
-libre.convertAsync = require("util").promisify(libre.convert);
+let libre;
+try {
+  libre = require("libreoffice-convert");
+  libre.convertAsync = require("util").promisify(libre.convert);
+  console.log("LibreOffice converter loaded successfully");
+} catch (err) {
+  console.error("Failed to load libreoffice-convert:", err.message);
+  console.warn("PDF conversion will not work without LibreOffice installed");
+  libre = null;
+}
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -107,7 +115,7 @@ app.get("/", (req, res) => {
   res.send("");
 });
 
-app.listen(3000, () => console.log("API running on port 3000"));
+app.listen(3030, () => console.log("API running on port 3000"));
 
 process.on("unhandledRejection", (reason, promise) => {
   console.error("Unhandled Rejection at:", promise, "reason:", reason);

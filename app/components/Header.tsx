@@ -65,6 +65,7 @@ export default function Header() {
 	const moreItems = [
 		["FAQs", "/#FAQ"],
 		["Events", "/events"],
+		["Awards", "/awards-and-recognition"],
 		["Careers", "/careers"],
 		["Values", "/values"],
 		//		["Policies", "/policies"],

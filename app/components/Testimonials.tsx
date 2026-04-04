@@ -94,6 +94,7 @@ export default function Testimonials() {
 				<div
 					ref={scrollContainerRef}
 					onClick={handleClick}
+					onKeyDown={handleClick}
 					className="overflow-x-auto scrollbar-hide"
 					style={{
 						scrollbarWidth: "none",
