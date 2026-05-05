@@ -86,7 +86,7 @@ export default function Footer() {
 						<div className="w-full md:w-auto p-3 md:px-6 flex justify-center">
 							<a
 								className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium text-nowrap"
-								href="/complaints"
+								href="/feedback#"
 							>
 								Complaints/Feedback
 							</a>

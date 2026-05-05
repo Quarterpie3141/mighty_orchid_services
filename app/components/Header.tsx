@@ -68,6 +68,7 @@ export default function Header() {
 		["Awards", "/awards-and-recognition"],
 		["Careers", "/careers"],
 		["Values", "/values"],
+		["Feedback", "/feedback#"],
 		//		["Policies", "/policies"],
 	];
 

@@ -1,4 +1,5 @@
 import {
+	Awards,
 	CollaboratingWith,
 	ContactForm,
 	FAQ,
@@ -48,7 +49,8 @@ export default function Home() {
 			</section>
 			{/* Testimonials */}
 			<Testimonials />
-			{/* Meet the team */}
+			{/* Awards and Recognition */}
+			<Awards />
 			{/* Contact us*/}
 			<section id="contact">
 				<ContactForm />

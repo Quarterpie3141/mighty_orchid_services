@@ -10,3 +10,4 @@ export { default as Footer } from "./Footer";
 export { default as FeedbackForm } from "./FeedbackForm";
 export { default as MeetTheTeam } from "./MeetTheTeam";
 export { default as CollaboratingWith } from "./CollaboratingWith";
+export { default as Awards } from "./Awards";
