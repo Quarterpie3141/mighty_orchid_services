@@ -1,6 +1,6 @@
 "use client";
-import { Footer, Header } from "../../../components";
-import PhotoGrid from "../../components/PhotoGrid";
+import { Footer, Header } from "../../components";
+import PhotoGrid from "../components/PhotoGrid";
 
 export default function Home() {
 	const imageUrls = Array.from(

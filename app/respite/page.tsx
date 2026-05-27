@@ -55,12 +55,6 @@ export default function Home() {
 							link="/respite/houses/10-Grant-Street-Bulgarra"
 						/>
 						<HouseCard
-							image="https://cdn.mtos.com.au/images/respite-houses/35-mujira-ramble-baynton/cover.jpeg"
-							name="Mujira Ramble Baynton"
-							address="35 Mujira Ramble Baynton"
-							link="/respite/houses/35-Mujira-Ramble-Baynton"
-						/>
-						<HouseCard
 							image="https://cdn.mtos.com.au/images/respite-houses/7a-jennifer-court-pegscreek/cover.jpeg"
 							name="Jennifer Court Pegscreek"
 							address="7A Jennifer Court Pegscreek"
