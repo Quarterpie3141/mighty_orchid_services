@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import AccessibilityControls from "./components/AccessibilityControls";
 import "./globals.css";
 
 const inter = Inter({
@@ -221,6 +222,7 @@ export default function RootLayout({
 		<html lang="en-AU" className={inter.variable}>
 			<body className={`${inter.className} antialiased`}>
 				{children}
+				<AccessibilityControls />
 
 				{/* JSON-LD: Organization */}
 				<Script
