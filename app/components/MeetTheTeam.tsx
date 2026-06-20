@@ -46,7 +46,7 @@ export default function MeetTheTeam() {
 					{/* Image block */}
 					<div className="relative">
 						<Image
-							src="/team-assets/full-team.webp"
+							src="/team-assets/full-team.jpg"
 							alt="Our team"
 							width={600}
 							height={400}

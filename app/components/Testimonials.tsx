@@ -11,6 +11,12 @@ const testimonials = [
 	},
 	{
 		quote:
+			"Thank you very much to MTOS for funding this scholarship. It will be assisting me in the travel costs associated with completing my third teaching placement at a metropolitan school. Once I'm qualified as a teacher I will be able to serve the Karratha community by delivering quality education that has been informed through different experiences from a range of schools. Thank you once again!",
+		author: "Poppy Woods",
+		role: "Scholarship Recipient",
+	},
+	{
+		quote:
 			"Mighty orchid services is like my second family, always very supportive, easy to communicate with and all together wonderful.",
 		author: "Rebecca Matthews",
 		role: "Participant",
