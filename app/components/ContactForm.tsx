@@ -211,17 +211,36 @@ export default function ContactForm() {
 											</svg>
 										</div>
 										<h3 className="mb-4 text-2xl md:text-3xl font-bold leading-9 text-coolGray-900">
-											Office
+											Offices
 										</h3>
-										<a href="https://www.google.com/maps/dir//Business+Center,+51,+5%2F15+Sharpe+Ave,+Karratha+WA+6714/@-20.7349931,116.8421831,16.96z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86b252b15355118b:0x30d9bdae1a426244!2m2!1d116.8436614!2d-20.7340226?entry=ttu">
-											<p className="text-lg md:text-xl text-coolGray-500 font-medium hover:text-mto-orange transition">
-												51/5-15 Sharpe Avenue
-												<br />
-												Karratha Village Business Center
-												<br />
-												Karratha, WA 6714
-											</p>
-										</a>
+										<div className="space-y-4">
+											<div>
+												<p className="text-base md:text-lg font-semibold text-coolGray-900">
+													Karratha
+												</p>
+												<a href="https://www.google.com/maps/dir//Business+Center,+51,+5%2F15+Sharpe+Ave,+Karratha+WA+6714/@-20.7349931,116.8421831,16.96z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86b252b15355118b:0x30d9bdae1a426244!2m2!1d116.8436614!2d-20.7340226?entry=ttu">
+													<p className="text-lg md:text-xl text-coolGray-500 font-medium hover:text-mto-orange transition">
+														51/5-15 Sharpe Avenue
+														<br />
+														Karratha Village Business Center
+														<br />
+														Karratha, WA 6714
+													</p>
+												</a>
+											</div>
+											<div>
+												<p className="text-base md:text-lg font-semibold text-coolGray-900">
+													Perth
+												</p>
+												<a href="https://www.google.com/maps/search/?api=1&query=30+Golden+Retreat%2C+Bullsbrook+WA+6084">
+													<p className="text-lg md:text-xl text-coolGray-500 font-medium hover:text-mto-orange transition">
+														30 Golden Retreat
+														<br />
+														Bullsbrook, WA 6084
+													</p>
+												</a>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div className="w-full md:w-1/2 px-4">

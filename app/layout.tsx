@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 		template: "%s | MTOS",
 	},
 	description:
-		"Registered NDIS disability support provider in Karratha and the Pilbara. We offer SIL, respite, community access, daily living supports, high-intensity care, and employment assistance. People Looking After People.",
+		"Registered NDIS disability support provider in Karratha, the Pilbara, and Perth. We offer SIL, respite, community access, daily living supports, high-intensity care, and employment assistance. People Looking After People.",
 	keywords: [
 		"NDIS",
 		"NDIS provider",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 		siteName: "Mighty Orchid Support (MTOS)",
 		title: "MTOS | Mighty Orchid Disability Support Services",
 		description:
-			"Registered NDIS provider serving Karratha, Port Hedland, and the Pilbara.",
+			"Registered NDIS provider serving Karratha, Port Hedland, the Pilbara, and Perth.",
 		locale: "en_AU",
 		images: [
 			{
@@ -114,19 +114,35 @@ export default function RootLayout({
 			"https://www.facebook.com/people/Mighty-Orchid-Disability-Services/61557284220147/", // TODO or remove
 			"https://au.linkedin.com/company/mighty-orchid-services-pty-ltd", // TODO or remove
 		],
-		address: {
-			streetAddress: "51, 5-15 Sharpe Avenue",
-			addressLocality: "Karratha",
-			addressRegion: "WA",
-			postalCode: "6714",
-			addressCountry: "AU",
-		},
+		offices: [
+			{
+				name: "Mighty Orchid Services — Karratha",
+				address: {
+					streetAddress: "51, 5-15 Sharpe Avenue",
+					addressLocality: "Karratha",
+					addressRegion: "WA",
+					postalCode: "6714",
+					addressCountry: "AU",
+				},
+			},
+			{
+				name: "Mighty Orchid Services — Perth",
+				address: {
+					streetAddress: "30 Golden Retreat",
+					addressLocality: "Bullsbrook",
+					addressRegion: "WA",
+					postalCode: "6084",
+					addressCountry: "AU",
+				},
+			},
+		],
 		areaServed: [
 			"Karratha",
 			"Port Hedland",
 			"South Hedland",
 			"Hedland",
 			"Perth",
+			"Bullsbrook",
 			"Pilbara",
 			"Roebourne",
 			"Dampier",
@@ -154,17 +170,23 @@ export default function RootLayout({
 		sameAs: business.sameAs,
 	};
 
-	const localBusinessJsonLd = {
+	// One LocalBusiness entry per office so each location can be indexed.
+	const localBusinessJsonLd = business.offices.map((office) => ({
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
-		name: business.name,
+		name: office.name,
 		url: business.url,
 		image: business.logo,
 		telephone: business.phone,
 		email: business.email,
 		address: {
 			"@type": "PostalAddress",
-			...business.address,
+			...office.address,
+		},
+		parentOrganization: {
+			"@type": "Organization",
+			name: business.name,
+			url: business.url,
 		},
 		areaServed: business.areaServed,
 		priceRange: "$$",
@@ -176,7 +198,7 @@ export default function RootLayout({
 				closes: "17:00",
 			},
 		],
-	};
+	}));
 
 	const serviceJsonLd = {
 		"@context": "https://schema.org",
