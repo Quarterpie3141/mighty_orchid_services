@@ -182,6 +182,10 @@ export default function ContactForm() {
 												413 302
 											</p>
 											<p>
+												<span className="font-semibold">Perth:</span> 0457 863
+												237
+											</p>
+											<p>
 												<span className="font-semibold">First On-call:</span>{" "}
 												0499 190 471
 											</p>
