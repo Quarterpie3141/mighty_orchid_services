@@ -4,39 +4,24 @@ import { corsHandler, mailjet } from "./common";
 export const sendMailFeedback = functions.https.onRequest(
 	(request, response) => {
 		corsHandler(request, response, () => {
-			const secret = "6LfVA-oqAAAAAJebYeOGrgYiLt02itQMIja_yndu" as string;
 			const now = new Date();
 
 			const senderEmail = request.body.email;
-			const captchaResponse = request.body.token;
 			const message = request.body.message;
 			const phoneNumber = request.body.phone;
 			const name = request.body.name;
-			const remoteip = request.ip;
 
-			async function verfiySend() {
-				const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${captchaResponse}&remoteip=${remoteip}`;
-
+			async function send() {
 				try {
-					const reCaptchaResponse = await fetch(verifyUrl, { method: "POST" });
-
-					const recaptchaData = await reCaptchaResponse.json();
-
-					if (recaptchaData.success && recaptchaData.score > 0.5) {
-						await deliverEmail();
-						response
-							.status(200)
-							.json({ message: "Form submitted successfully!" });
-					} else {
-						await deliverEmail();
-						response
-							.status(200)
-							.json({ message: "reCAPTCHA verification failed." });
-					}
+					await deliverEmail();
+					response
+						.status(200)
+						.json({ message: "Form submitted successfully!" });
 				} catch (error) {
+					console.error(`Error during form submission ${error}`);
 					response
 						.status(500)
-						.json({ message: "Error during reCAPTCHA verification.", error });
+						.json({ message: "Error during form submission.", error });
 				}
 			}
 
@@ -142,7 +127,7 @@ export const sendMailFeedback = functions.https.onRequest(
 				}
 			}
 
-			verfiySend();
+			send();
 		});
 	},
 );

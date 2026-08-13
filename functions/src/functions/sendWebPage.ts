@@ -1,41 +1,23 @@
 import axios from "axios";
 import * as functions from "firebase-functions/v2";
-import { corsHandler, API_KEY } from "./common";
+import { API_KEY, corsHandler } from "./common";
 
 export const sendWebPage = functions.https.onRequest((request, response) => {
 	corsHandler(request, response, () => {
-		const secret = "6LfVA-oqAAAAAJebYeOGrgYiLt02itQMIja_yndu" as string;
-
-		const captchaResponse = request.body.token;
-		const remoteip = request.ip;
-
-		async function verfiySend() {
-			const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${captchaResponse}&remoteip=${remoteip}`;
-
+		async function send() {
 			try {
-				const reCaptchaResponse = await fetch(verifyUrl, { method: "POST" });
-
-				const recaptchaData = await reCaptchaResponse.json();
-				if (recaptchaData.success && recaptchaData.score > 0.5) {
-					const status = await callAPI();
-					if (status === 200) {
-						response
-							.status(200)
-							.json({ message: "Form submitted successfully!" });
-					} else {
-						response
-							.status(500)
-							.json({ message: "Form submitted successfully!" });
-					}
-				} else {
+				const status = await callAPI();
+				if (status === 200) {
 					response
-						.status(401)
-						.json({ message: "reCAPTCHA verification failed." });
+						.status(200)
+						.json({ message: "Form submitted successfully!" });
+				} else {
+					response.status(500).json({ message: "Form submission failed." });
 				}
 			} catch (error) {
 				response
 					.status(500)
-					.json({ message: "Error during reCAPTCHA verification.", error });
+					.json({ message: "Error during form submission.", error });
 				console.error(error);
 			}
 		}
@@ -65,12 +47,23 @@ export const sendWebPage = functions.https.onRequest((request, response) => {
 				}
 				return 500;
 			} catch (error) {
-				console.error("Error calling Express API:", error);
+				// Log a plain-object summary: the Firebase logger drops entries it
+				// cannot serialise, and an AxiosError is circular.
+				console.error("Error calling Express API:", {
+					code: axios.isAxiosError(error) ? error.code : undefined,
+					message: error instanceof Error ? error.message : String(error),
+					status: axios.isAxiosError(error)
+						? error.response?.status
+						: undefined,
+					body: axios.isAxiosError(error)
+						? JSON.stringify(error.response?.data)?.slice(0, 500)
+						: undefined,
+				});
 				return 500;
 			}
 		}
 
-		verfiySend();
+		send();
 	});
 });
 

@@ -1,6 +1,5 @@
 export { default as Header } from "./Header";
 export { default as Hero } from "./Hero";
-export { default as Captcha } from "./Captcha";
 export { default as Help } from "./Help";
 export { default as Values } from "./Values";
 export { default as Testimonials } from "./Testimonials";
@@ -11,3 +10,4 @@ export { default as FeedbackForm } from "./FeedbackForm";
 export { default as MeetTheTeam } from "./MeetTheTeam";
 export { default as CollaboratingWith } from "./CollaboratingWith";
 export { default as Awards } from "./Awards";
+export { default as VideoFeature } from "./VideoFeature";

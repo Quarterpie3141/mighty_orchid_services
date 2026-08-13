@@ -1,11 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { FeedbackForm, Footer, Header } from "../components";
 
 export default function Careers() {
 	return (
-		<GoogleReCaptchaProvider reCaptchaKey="6LfVA-oqAAAAAPb9xgUrF4ZR_SX5wdIjCCCDxrMI">
+		<>
 			{/* Header */}
 			<Header />
 			<section
@@ -69,6 +68,6 @@ export default function Careers() {
 			</section>
 			{/* Footer */}
 			<Footer />
-		</GoogleReCaptchaProvider>
+		</>
 	);
 }

@@ -126,6 +126,16 @@ export default function RootLayout({
 				},
 			},
 			{
+				name: "Mighty Orchid Services — Hedland",
+				address: {
+					streetAddress: "Unit 22/1 Lawson Street",
+					addressLocality: "South Hedland",
+					addressRegion: "WA",
+					postalCode: "6722",
+					addressCountry: "AU",
+				},
+			},
+			{
 				name: "Mighty Orchid Services — Perth",
 				address: {
 					streetAddress: "30 Golden Retreat",

@@ -1,7 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function ReferralForm() {
 	const [hasManager, setHasManager] = useState(false);
@@ -134,8 +133,6 @@ export default function ReferralForm() {
 		}));
 	};
 
-	const { executeRecaptcha } = useGoogleReCaptcha();
-
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		setFormWaiting(true);
@@ -150,20 +147,9 @@ export default function ReferralForm() {
 		}
         */
 
-		if (!executeRecaptcha) {
-			console.log("Recaptcha not ready");
-			setFormError("Recaptcha not ready, please try again later.");
-			setFormWaiting(false);
-			return;
-		}
-
 		try {
-			// Execute reCAPTCHA with the action name
-			const token = await executeRecaptcha("form_submission");
-
 			// Prepare data to send
 			const dataToSend = {
-				token,
 				hasManager,
 				hasRep,
 				participantInfo,

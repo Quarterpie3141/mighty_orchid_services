@@ -1,36 +1,11 @@
 import axios from "axios";
 import * as functions from "firebase-functions/v2";
-import { corsHandler, API_KEY } from "./common";
+import { API_KEY, corsHandler } from "./common";
 
 export const sendNDISReferralForm = functions.https.onRequest(
 	(request, response) => {
 		corsHandler(request, response, () => {
-			//const captchaResponse = request.body.token;
-			//const remoteip = request.ip;
-
-			async function verifyAndSend() {
-				// const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET}&response=${captchaResponse}&remoteip=${remoteip}`;
-				// try {
-				//   const reCaptchaResponse = await fetch(verifyUrl, { method: "POST" });
-				//   const recaptchaData = await reCaptchaResponse.json();
-				//   if (recaptchaData.success && recaptchaData.score > 0.5) {
-				//     const status = await callAPI();
-				//     if (status === 200) {
-				//       response.status(200).json({ message: "Form submitted successfully!" });
-				//     } else {
-				//       response.status(500).json({ message: "Form submission failed." });
-				//     }
-				//   } else {
-				//     response
-				//       .status(401)
-				//       .json({ message: "reCAPTCHA verification failed." });
-				//   }
-				// } catch (error) {
-				//   console.error(error);
-				//   response.status(500).json({ message: "Error during reCAPTCHA verification.", error });
-				// }
-
-				// TO DO IMPLEMENT CAPTCHA
+			async function send() {
 				const status = await callAPI();
 				if (status === 200) {
 					response
@@ -63,12 +38,23 @@ export const sendNDISReferralForm = functions.https.onRequest(
 					console.log("Request to Express API completed", apiResponse.data);
 					return apiResponse.status === 200 ? 200 : 500;
 				} catch (error) {
-					console.error("Error calling Express API:", error);
+					// Log a plain-object summary: the Firebase logger drops entries it
+					// cannot serialise, and an AxiosError is circular.
+					console.error("Error calling Express API:", {
+						code: axios.isAxiosError(error) ? error.code : undefined,
+						message: error instanceof Error ? error.message : String(error),
+						status: axios.isAxiosError(error)
+							? error.response?.status
+							: undefined,
+						body: axios.isAxiosError(error)
+							? JSON.stringify(error.response?.data)?.slice(0, 500)
+							: undefined,
+					});
 					return 500;
 				}
 			}
 
-			verifyAndSend();
+			send();
 		});
 	},
 );

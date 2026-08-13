@@ -10,6 +10,7 @@ import {
 	MeetTheTeam,
 	Testimonials,
 	Values,
+	VideoFeature,
 } from "./components";
 
 export default function Home() {
@@ -33,6 +34,8 @@ export default function Home() {
 			<Help />
 			{/* Values */}
 			<Values />
+			{/* Video */}
+			<VideoFeature />
 			<MeetTheTeam />
 			{/* Collaborating With */}
 			<CollaboratingWith />
