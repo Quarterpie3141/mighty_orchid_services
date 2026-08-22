@@ -66,6 +66,12 @@ export default function Home() {
 							address="39E Delambre Drive Nickol"
 							link="/respite/houses/39E-Delambre-Drive-Nickol"
 						/>
+						<HouseCard
+							image="https://cdn.mtos.com.au/images/respite-houses/30-golden-retreat-perth/cover.jpeg"
+							name="Golden Retreat Perth"
+							address="30 Golden Retreat Perth"
+							link="/respite/houses/30-Golden-Retreat-Perth"
+						/>
 					</div>
 				</div>
 			</section>
