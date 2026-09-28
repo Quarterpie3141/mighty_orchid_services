@@ -104,9 +104,21 @@ export default function Footer() {
 			</div>
 			<div className="border-b border-coolGray-100" />
 			<div className="container px-4 mx-auto">
-				<p className="py-10 md:pb-10 text-lg md:text-xl text-coolGray-400 font-medium text-center">
+				<p className="pt-10 pb-3 text-lg md:text-xl text-coolGray-400 font-medium text-center">
 					Mighty Orchid Services Pty Ltd.
 				</p>
+				<nav
+					aria-label="Legal"
+					className="pb-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-base text-coolGray-500"
+				>
+					<a className="hover:text-coolGray-600" href="/policies/privacy">
+						Privacy Policy
+					</a>
+					<span aria-hidden="true">·</span>
+					<a className="hover:text-coolGray-600" href="/policies/terms">
+						Terms of Use
+					</a>
+				</nav>
 			</div>
 			<div className="container px-4 mx-auto">
 				<p className=" text-lg md:text-xl text-coolGray-400 font-medium text-center">

@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import VideoFeature from "./VideoFeature";
+
 const testimonials = [
 	{
 		quote:
@@ -76,8 +78,21 @@ export default function Testimonials() {
 
 	const handleClick = () => setIsAutoScrolling((prev) => !prev);
 
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	const playVideo = () => {
+		const video = videoRef.current;
+		if (!video) return;
+		// On narrow screens the player sits below this prompt, so bring it into view.
+		video.scrollIntoView({ behavior: "smooth", block: "center" });
+		video.play().catch(() => {
+			// Playback can be blocked by the browser; the native controls remain available.
+		});
+	};
+
 	return (
 		<section
+			id="testimonials"
 			className="py-24 md:pb-28 bg-white"
 			style={{
 				backgroundImage: 'url("svg/pattern-white.svg")',
@@ -85,59 +100,95 @@ export default function Testimonials() {
 			}}
 		>
 			<div className="container px-4 mx-auto">
-				<div className="mb-16">
-					<span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-mto-orange font-medium uppercase rounded-full">
-						Testimonials
-					</span>
-					<h2 className="mb-4 text-4xl md:text-5xl leading-tight font-semibold tracking-tighter">
-						Voices of Experience
-					</h2>
-					<p className="text-xl font-medium text-coolGray-500">
-						{`Discover what our participants have to say about their journey with us. Through their stories, you'll gain insight into the impact of our support and the transformative experiences our participants have undergone. From overcoming challenges to achieving milestones, these testimonials showcase the real-life successes of individuals within our community.`}
-					</p>
+				<div className="mb-16 flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-16">
+					<div className="lg:w-7/12">
+						<span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-mto-orange font-medium uppercase rounded-full">
+							Testimonials
+						</span>
+						<h2 className="mb-4 text-4xl md:text-5xl leading-tight font-semibold tracking-tighter">
+							Voices of Experience
+						</h2>
+						<p className="text-xl font-medium text-coolGray-500">
+							{`Discover what our participants have to say about their journey with us. Through their stories, you'll gain insight into the impact of our support and the transformative experiences our participants have undergone. From overcoming challenges to achieving milestones, these testimonials showcase the real-life successes of individuals within our community.`}
+						</p>
+						<div className="mt-8 flex items-center gap-3 text-coolGray-500">
+							<button
+								type="button"
+								onClick={playVideo}
+								aria-label="Play video testimonial"
+								className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-mto-blue text-white transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-mto-blue focus-visible:ring-offset-2"
+							>
+								<svg
+									className="h-4 w-4 ml-0.5"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path d="M8 5v14l11-7z" />
+								</svg>
+							</button>
+							<p className="text-base font-medium">
+								Press play to hear a story in their own words.
+							</p>
+						</div>
+					</div>
+					<div className="lg:w-5/12">
+						<VideoFeature videoRef={videoRef} />
+					</div>
 				</div>
 
-				<div
-					ref={scrollContainerRef}
-					onClick={handleClick}
-					onKeyDown={handleClick}
-					className="overflow-x-auto scrollbar-hide"
-					style={{
-						scrollbarWidth: "none",
-						msOverflowStyle: "none",
-					}}
-				>
-					<style>{`
-						.scrollbar-hide::-webkit-scrollbar {
-							display: none;
-						}
-					`}</style>
-					<div className="flex gap-6 pb-4">
-						{[
-							...testimonials,
-							...testimonials,
-							...testimonials,
-							...testimonials,
-						].map((testimonial, index) => (
-							<div
-								key={`${testimonial.author}-${index}`}
-								className="flex-shrink-0 w-full md:w-96 lg:w-[28rem]"
-							>
-								<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md min-h-80">
-									<h3 className="mb-6 text-lg md:text-lg font-medium leading-relaxed flex-grow">
-										{`"${testimonial.quote}"`}
-									</h3>
-									<div>
-										<h4 className="mb-1 text-lg font-semibold">
-											- {testimonial.author}
-										</h4>
-										<p className="text-lg text-coolGray-400">
-											{testimonial.role}
-										</p>
+				<div className="relative">
+					{/* Fade the carousel into the section edges instead of cutting it off. */}
+					<div
+						aria-hidden="true"
+						className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 md:w-16 bg-gradient-to-r from-white to-transparent"
+					/>
+					<div
+						aria-hidden="true"
+						className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 md:w-16 bg-gradient-to-l from-white to-transparent"
+					/>
+					<div
+						ref={scrollContainerRef}
+						onClick={handleClick}
+						onKeyDown={handleClick}
+						className="overflow-x-auto scrollbar-hide"
+						style={{
+							scrollbarWidth: "none",
+							msOverflowStyle: "none",
+						}}
+					>
+						<style>{`
+							.scrollbar-hide::-webkit-scrollbar {
+								display: none;
+							}
+						`}</style>
+						<div className="flex gap-6 pb-4">
+							{[
+								...testimonials,
+								...testimonials,
+								...testimonials,
+								...testimonials,
+							].map((testimonial, index) => (
+								<div
+									key={`${testimonial.author}-${index}`}
+									className="flex-shrink-0 w-full md:w-96 lg:w-[28rem]"
+								>
+									<div className="flex flex-col h-full p-8 bg-coolGray-50 shadow-md rounded-md min-h-80">
+										<h3 className="mb-6 text-lg md:text-lg font-medium leading-relaxed flex-grow">
+											{`"${testimonial.quote}"`}
+										</h3>
+										<div>
+											<h4 className="mb-1 text-lg font-semibold">
+												- {testimonial.author}
+											</h4>
+											<p className="text-lg text-coolGray-400">
+												{testimonial.role}
+											</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

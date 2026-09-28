@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import CollectionNotice from "../components/CollectionNotice";
 
 export default function ReferralForm() {
 	const [hasManager, setHasManager] = useState(false);
@@ -958,6 +959,8 @@ export default function ReferralForm() {
 								/>
 							</div>
 						</div>
+
+						<CollectionNotice variant="participant" className="mb-5" />
 
 						<button
 							type="submit"

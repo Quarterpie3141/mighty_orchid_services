@@ -46,3 +46,7 @@ functions/.cache
 
 # Ignore local functions secret file
 functions/src/functions/common.ts
+
+# large local video (production serves these from cdn.mtos.com.au)
+/public/other-assets/video/*.mov
+/public/other-assets/video/*.mp4

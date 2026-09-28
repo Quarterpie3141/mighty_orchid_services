@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import CollectionNotice from "./CollectionNotice";
 export default function ContactForm() {
 	const [formWaiting, setFormWaiting] = useState(false);
 	const [formError, setFormError] = useState<string | null>(null);
@@ -447,6 +448,7 @@ export default function ContactForm() {
 										Fields marked with a * are required
 									</p>
 								</div>
+								<CollectionNotice className="mb-3" />
 								<div className="pt-3">
 									<button
 										type="submit"

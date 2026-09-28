@@ -222,7 +222,7 @@ export default function RootLayout({
 		areaServed: business.areaServed,
 		serviceType: business.services,
 		audience: { "@type": "PeopleAudience", audienceType: "NDIS participants" },
-		termsOfService: `${business.url}terms`, // optional
+		termsOfService: `${business.url}policies/terms`, // optional
 	};
 
 	const breadcrumbJsonLd = {

@@ -18,7 +18,14 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 // Use express.static to serve static files
-app.use(express.static(baseDir));
+// maxAge matters for media: the default is `cache-control: public, max-age=0`,
+// which forces revalidation on every byte-range request. Browsers then cannot
+// retain ranges while streaming video, and Firefox fails ranged reads outright
+// (NS_ERROR_DOM_MEDIA_RANGE_ERR). Deliberately not `immutable`, so replacing a
+// file in place is still picked up once the cache entry goes stale.
+app.use(express.static(baseDir, {
+  maxAge: '30d',
+}));
 
 // Example API route
 app.get('/api/hello', (req: Request, res: Response) => {
