@@ -71,6 +71,10 @@ export const events: EventItem[] = [
 				type: "paragraph" as const,
 				text: "Meet local organisations, explore services and enjoy a free lunch from 12:00 PM to 1:00 PM. Hosted by Good Turn Services and Mighty Orchid Services.",
 			},
+			{
+				type: "paragraph" as const,
+				text: "As members of the City of Karratha's Disability Access and Inclusion Stakeholder Group, we were proud to help bring this event to life. A highlight of the day was Karratha local Mackenzie, who shared an inspiring acrostic verse spelling out the word DISABILITY, with each letter standing for themes like diversity, inclusion, support, advocacy and independence. Read her full verse on the City of Karratha website: karratha.wa.gov.au/news/mackenzies-acrostic-verse-international-day-persons-disabilities",
+			},
 		],
 		registrationLink: "",
 		gallery: [],
