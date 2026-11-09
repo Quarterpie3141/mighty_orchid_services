@@ -12,7 +12,8 @@ export interface Speaker {
 }
 
 export type ContentBlock =
-	| { type: "paragraph"; text: string }
+	| { type: "heading"; text: string }
+   	| { type: "link"; text: string; href: string }
 	| {
 			type: "image";
 			src: string;
