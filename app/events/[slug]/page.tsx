@@ -92,6 +92,31 @@ export default async function EventDetail({ params }: Props) {
 										return <p key={block.text}>{block.text}</p>;
 									}
 
+   									if (block.type === "heading") {
+   										return (
+   											<h2
+   												key={block.text}
+   												className="text-2xl font-semibold text-mto-blue mt-8 mb-3"
+   											>
+   												{block.text}
+   											</h2>
+   										);
+   									}
+
+   									if (block.type === "link") {
+   										return (
+   											<p key={block.href} className="mt-3">
+   												<a
+   													href={block.href}
+   													className="text-mto-orange font-medium underline hover:text-mto-blue"
+   													target="_blank"
+   													rel="noopener noreferrer"
+   												>
+   													{block.text} →
+   												</a>
+   											</p>
+   										);
+   									}
 									if (block.type === "image") {
 										const img = block;
 										if (img.fullWidth) {
