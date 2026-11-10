@@ -154,7 +154,10 @@ export default function Footer() {
 						/>
 					</div>
 				</a>
-				<div className="flex items-center justify-center">
+				<a
+					className="flex items-center justify-center"
+					href="https://waamh.org.au/"
+				>
 					<div className="relative w-36 h-16 md:w-44 md:h-20">
 						<Image
 							className="object-contain"
@@ -164,7 +167,7 @@ export default function Footer() {
 							sizes="(min-width: 768px) 176px, 144px"
 						/>
 					</div>
-				</div>
+				</a>
 				<a
 					className="flex items-center justify-center"
 					href="https://www.onslowcci.com.au/"
