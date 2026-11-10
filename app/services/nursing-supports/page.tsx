@@ -54,8 +54,8 @@ export default function NursingSupportsPage() {
 						<div className="lg:col-span-5">
 							<div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-coolGray-200">
 								<Image
-									src="/stock/bruno-rodrigues-279xIHymPYY-unsplash.jpg"
-									alt="A nurse supporting a person at home"
+									src="/stock/nursing-supports-hero.jpg"
+									alt="A MTOS nurse reviewing a support plan on a tablet"
 									width={960}
 									height={720}
 									className="object-cover w-full h-full"
