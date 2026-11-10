@@ -295,6 +295,33 @@ export default function SupportedIndependentLivingPage() {
 				</div>
 			</section>
 
+						{/* COMMON QUESTIONS */}
+			<section className="bg-white">
+				<div className="container mx-auto px-4 pb-16">
+					<h2 className="text-2xl md:text-3xl font-semibold text-coolGray-900 text-center">
+						Common questions
+					</h2>
+					<div className="mt-8 max-w-3xl mx-auto space-y-6">
+						<Question q="Can I choose who I live with?">
+							You can tell us who you would like to live with and we will look at
+							whether it works for everyone. It depends on the other person's
+							care plan and NDIS goals as well as your own, so we work through it
+							together with your support coordinator.
+						</Question>
+						<Question q="Can I try it before I commit?">
+							Yes. We can arrange a short stay first, based on a reference from
+							your support coordinator. It gives you a chance to see how the home
+							and the routine feel before anything is locked in.
+						</Question>
+						<Question q="What if living with someone does not work out?">
+							Tell us and we will work on it with you. We can look at other
+							options that fit your care plan, alongside recommendations from
+							your support coordinator.
+						</Question>
+					</div>
+				</div>
+			</section>
+			
 			{/* FUNDING & ROC CALLOUT */}
 			<section className="bg-white">
 				<div className="container mx-auto px-4 pb-20">
@@ -358,6 +385,15 @@ function Office({ city, lines }: { city: string; lines: string[] }) {
 					</span>
 				))}
 			</address>
+		</div>
+	);
+}
+
+function Question({ q, children }: { q: string; children: React.ReactNode }) {
+	return (
+		<div className="rounded-xl border border-coolGray-200 p-6 shadow-sm bg-white">
+			<h3 className="text-lg font-semibold text-coolGray-900">{q}</h3>
+			<p className="mt-2 text-coolGray-700 leading-relaxed">{children}</p>
 		</div>
 	);
 }
