@@ -388,7 +388,7 @@ export default function NursingSupportsPage() {
 							>
 								info@mtos.com.au
 							</a>{" "}
-							or send a referral.
+							or send a referral. We reply within one business day.
 						</p>
 						<div className="mt-6 flex flex-wrap gap-4">
 							<a
