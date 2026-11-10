@@ -272,6 +272,46 @@ export default function Help() {
 							</a>
 						</div>
 					</div>
+										<div className="w-full md:w-1/2 lg:w-1/3 px-4">
+						<div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+							<div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-mto-blue rounded-lg">
+								<img
+									width={35}
+									height={35}
+									src="https://mtos.com.au/service-svg/care-treatment-heart-svgrepo-com.svg"
+									alt="Service"
+								/>
+							</div>
+							<h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+								Nursing Supports
+							</h3>
+							<p className="text-coolGray-500 font-medium mb-6">
+								Registered Nurse-led support, so your support workers can safely
+								help with your health-related care at home and in the community.
+							</p>
+							<a
+								href="/services/nursing-supports"
+								className=" w-2/5 mt-4 mx-auto px-6 py-2 text-white bg-mto-blue hover:bg-mto-orange font-medium rounded-md shadow-md transition duration-200 flex items-center justify-center"
+							>
+								Learn More
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="w-5 h-5 ml-2"
+								>
+									<title>arrow</title>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M9 5l7 7-7 7"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
