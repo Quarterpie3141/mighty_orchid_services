@@ -150,26 +150,34 @@ export default function SupportedIndependentLivingPage() {
 					<div className="grid lg:grid-cols-2 gap-10">
 						<div>
 							<h3 className="text-2xl font-semibold text-coolGray-900">
-								Who is SIL suitable for?
+								What is SIL?
 							</h3>
 							<p className="mt-3 text-coolGray-700 leading-relaxed">
-								People who need regular help across the day (and sometimes
-								overnight) in order to live safely and participate in home and
-								community life. SIL is most suitable when supports are ongoing
-								and best delivered in a shared arrangement.
+								Supported Independent Living is NDIS funding for the help you
+								need with everyday tasks at home. It pays for the support, not
+								the rent or the house itself. Most people with SIL funding share
+								a home with one or two others, with support workers on hand
+								through the day and overnight.
 							</p>
+							<h3 className="mt-8 text-2xl font-semibold text-coolGray-900">
+								SIL may suit you if you
+							</h3>
 							<ul className="mt-4 space-y-2 text-coolGray-700">
 								<li className="flex gap-3">
-									<DotIcon /> Daily prompts or assistance for personal care
+									<DotIcon /> Need help or prompting with personal care most
+									days
 								</li>
 								<li className="flex gap-3">
-									<DotIcon /> Support with meals, medication, and routines
+									<DotIcon /> Need support with meals, medication and daily
+									routines
 								</li>
 								<li className="flex gap-3">
-									<DotIcon /> Supervision for safety or behaviours of concern
+									<DotIcon /> Need someone on hand for safety, including
+									overnight
 								</li>
 								<li className="flex gap-3">
-									<DotIcon /> Benefits from living with compatible housemates
+									<DotIcon /> Would like to share a home and split the support
+									with others
 								</li>
 							</ul>
 						</div>
