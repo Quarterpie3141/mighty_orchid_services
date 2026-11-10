@@ -32,12 +32,27 @@ export default function SupportedIndependentLivingPage() {
 								Supported Independent Living (SIL)
 							</h1>
 							<p className="mt-5 text-lg md:text-xl text-coolGray-600">
-								SIL is for people who need regular help with daily life in a
-								shared home. Your NDIS plan may include SIL funding so you can
-								live with friends or housemates who also have disabilities,
-								while our support workers assist with day-to-day tasks and build
-								independence.
+								If your NDIS plan includes SIL funding, we provide the support
+								you need to live well at home. Our support workers help with
+								everyday things like personal care, meals, medication prompts
+								and getting out into the community, during the day, in the
+								evening or overnight. We provide SIL in Karratha, South Hedland
+								and Perth.
 							</p>
+							<div className="mt-8 flex flex-wrap gap-4">
+								<a
+									href="/referrals"
+									className="inline-flex items-center justify-center px-6 py-3 text-white bg-mto-blue hover:bg-mto-orange rounded-lg border border-mto-blue shadow-sm transition-colors"
+								>
+									Make a referral
+								</a>
+								<a
+									href="tel:+61851067301"
+									className="inline-flex items-center justify-center px-6 py-3 text-coolGray-800 bg-white hover:bg-coolGray-100 rounded-lg border border-coolGray-200 shadow-sm transition-colors"
+								>
+									Call 08 5106 7301
+								</a>
+							</div>
 						</div>
 
 						<div className="lg:col-span-5">
