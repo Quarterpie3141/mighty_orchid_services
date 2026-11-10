@@ -263,7 +263,7 @@ export default function EmploymentRelatedSupportsPage() {
 								Start a referral
 							</a>
 							<a
-								href="/contact"
+								href="/#contact-form"
 								className="inline-flex items-center justify-center px-6 py-3 text-coolGray-800 bg-white hover:bg-coolGray-100 rounded-lg border border-coolGray-200 shadow-sm transition-colors"
 							>
 								Talk to the team
