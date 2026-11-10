@@ -247,6 +247,39 @@ export default function SupportedIndependentLivingPage() {
 				</div>
 			</section>
 
+			{/* WHERE WE PROVIDE SIL */}
+			<section className="bg-white">
+				<div className="container mx-auto px-4 pb-16">
+					<h2 className="text-2xl md:text-3xl font-semibold text-coolGray-900 text-center">
+						Where we provide SIL
+					</h2>
+					<div className="mt-8 grid md:grid-cols-3 gap-6">
+						<Office
+							city="Karratha"
+							lines={["Unit 51, 5-15 Sharpe Avenue", "Karratha WA 6714"]}
+						/>
+						<Office
+							city="South Hedland"
+							lines={["Unit 22, 1 Lawson Street", "South Hedland WA 6722"]}
+						/>
+						<Office
+							city="Perth"
+							lines={["30 Golden Retreat", "Bullsbrook WA 6084"]}
+						/>
+					</div>
+					<p className="mt-6 text-center text-coolGray-700">
+						Not sure which office covers you? Call{" "}
+						<a
+							href="tel:+61851067301"
+							className="text-mto-orange font-medium underline hover:text-mto-blue"
+						>
+							08 5106 7301
+						</a>{" "}
+						and we will point you in the right direction.
+					</p>
+				</div>
+			</section>
+
 			{/* FUNDING & ROC CALLOUT */}
 			<section className="bg-white">
 				<div className="container mx-auto px-4 pb-20">
@@ -291,6 +324,21 @@ function Outcome({ title, desc }: { title: string; desc: string }) {
 		<div className="rounded-xl border border-coolGray-200 p-6 shadow-sm bg-white">
 			<h3 className="text-lg font-semibold text-coolGray-900">{title}</h3>
 			<p className="mt-2 text-coolGray-700">{desc}</p>
+		</div>
+	);
+}
+
+function Office({ city, lines }: { city: string; lines: string[] }) {
+	return (
+		<div className="rounded-xl border border-coolGray-200 p-6 shadow-sm bg-white">
+			<h3 className="text-lg font-semibold text-coolGray-900">{city}</h3>
+			<address className="mt-2 not-italic text-coolGray-700">
+				{lines.map((line) => (
+					<span key={line} className="block">
+						{line}
+					</span>
+				))}
+			</address>
 		</div>
 	);
 }
