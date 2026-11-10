@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://mtos.com.au"),
-	applicationName: "Mighty Orchid Support (MTOS)",
+	applicationName: "Mighty Orchid Services (MTOS)",
 	title: {
 		default: "MTOS | Mighty Orchid Disability Support Services",
 		template: "%s | MTOS",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 		"high intensity support",
 		"daily living support",
 		"employment support",
-		"Mighty Orchid Support",
+		"Mighty Orchid Services",
 		"MTOS",
 	],
 	category: "Disability support services",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://mtos.com.au/",
-		siteName: "Mighty Orchid Support (MTOS)",
+		siteName: "Mighty Orchid Services (MTOS)",
 		title: "MTOS | Mighty Orchid Disability Support Services",
 		description:
 			"Registered NDIS provider serving Karratha, Port Hedland, the Pilbara, and Perth.",
@@ -94,8 +94,8 @@ export const metadata: Metadata = {
 		initialScale: 1,
 		viewportFit: "cover",
 	},
-	authors: [{ name: "Mighty Orchid Support" }],
-	creator: "Mighty Orchid Support",
+	authors: [{ name: "Mighty Orchid Services" }],
+	creator: "Mighty Orchid Services",
 };
 
 export default function RootLayout({
