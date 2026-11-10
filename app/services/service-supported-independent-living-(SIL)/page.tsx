@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { Footer, Header } from "../../components";
 
+export const metadata = {
+	title: {
+		absolute: "Supported Independent Living (SIL) | Mighty Orchid Services",
+	},
+	description:
+		"24/7 SIL support at home in Karratha, South Hedland and Perth from a registered NDIS provider. Make a referral or call +61 8 5106 7301.",
+};
+
 export default function SupportedIndependentLivingPage() {
 	return (
 		<>
