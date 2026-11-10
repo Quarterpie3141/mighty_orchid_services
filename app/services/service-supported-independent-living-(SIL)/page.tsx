@@ -99,26 +99,36 @@ export default function SupportedIndependentLivingPage() {
 						<div className="grid md:grid-cols-2">
 							<div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-coolGray-200">
 								<h2 className="text-xl font-semibold text-coolGray-900 mb-4">
-									What SIL includes
+									What your support can include
 								</h2>
 								<ul className="space-y-2 text-coolGray-700">
 									<li className="flex gap-3">
-										<CheckIcon /> Personal care (showering, dressing)
+										<CheckIcon /> Personal care, like showering, dressing and
+										getting ready for the day
 									</li>
 									<li className="flex gap-3">
-										<CheckIcon /> Meal planning and cooking support
+										<CheckIcon /> Help with meals, from planning and shopping to
+										cooking together
 									</li>
 									<li className="flex gap-3">
-										<CheckIcon /> Medication prompts per care plan
+										<CheckIcon /> Medication prompts, in line with your care
+										plan
 									</li>
 									<li className="flex gap-3">
-										<CheckIcon /> Home routines (light cleaning, laundry)
+										<CheckIcon /> Keeping the house running, like laundry and
+										tidying up
 									</li>
 									<li className="flex gap-3">
-										<CheckIcon /> Community access aligned to goals
+										<CheckIcon /> Getting out and about, to appointments, work,
+										sport or to see friends
 									</li>
 									<li className="flex gap-3">
-										<CheckIcon /> Day/evening/overnight support (as funded)
+										<CheckIcon /> Building skills so you can do more for
+										yourself over time
+									</li>
+									<li className="flex gap-3">
+										<CheckIcon /> Support during the day, in the evening and
+										overnight
 									</li>
 								</ul>
 							</div>
