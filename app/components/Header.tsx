@@ -98,7 +98,7 @@ export default function Header() {
 							transition={{ duration: 0.3, ease: "easeInOut" }}
 							className="h-10 md:h-12 lg:h-24 rounded-md md:ml-0"
 							src="/branding/logo-horizontal.png"
-							alt="Logo"
+							alt="Mighty Orchid Services logo"
 						/>
 						{isLargeScreen && (
 							<>
