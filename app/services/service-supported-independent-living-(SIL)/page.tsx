@@ -72,6 +72,21 @@ export default function SupportedIndependentLivingPage() {
 				</div>
 			</section>
 
+						{/* REGISTRATION */}
+			<section className="bg-white">
+				<div className="container mx-auto px-4 pb-12">
+					<div className="rounded-2xl border border-coolGray-200 p-6 md:p-8 shadow-sm bg-white">
+						<h2 className="text-xl font-semibold text-coolGray-900">
+							Registered for Supported Independent Living
+						</h2>
+						<p className="mt-3 text-coolGray-700 leading-relaxed">
+							Mighty Orchid Services is registered with the NDIS Commission to
+							provide Supported Independent Living.
+						</p>
+					</div>
+				</div>
+			</section>
+
 			{/* KEY OUTCOMES */}
 			<section className="bg-white">
 				<div className="container mx-auto px-4 pb-12">
@@ -293,6 +308,10 @@ export default function SupportedIndependentLivingPage() {
 							(including overnight where applicable). We review outcomes
 							regularly and adjust the roster when needs change—keeping you and
 							your supports informed.
+						</p>
+						<p className="mt-3 text-coolGray-700 leading-relaxed">
+							Send a referral or give us a call and we will reply within one
+							business day.
 						</p>
 						<div className="mt-6 flex flex-wrap gap-4">
 							<a
