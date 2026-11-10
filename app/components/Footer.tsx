@@ -17,7 +17,7 @@ export default function Footer() {
 							<img
 								src="/branding/logo-horizontal.png"
 								className=" rounded-lg md:h-24 h-12"
-								alt="Logo"
+								alt="Mighty Orchid Services logo"
 							/>
 						</div>
 					</a>
