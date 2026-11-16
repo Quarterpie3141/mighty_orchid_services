@@ -42,6 +42,38 @@ export interface EventItem {
 }
 
 export const events: EventItem[] = [
+		{
+		slug: "idpwd-2026",
+		title: "International Day of People With Disability 2026",
+		seoTitle:
+			"International Day of People With Disability 2026 — Mighty Orchid Services",
+		seoDescription:
+			"Come and see us at the Fiona Stanley Hospital IDPwD celebration on 3 December 2026. Free event, everyone welcome.",
+		date: "2026-12-03",
+		location:
+			"Fiona Stanley Hospital, 14 Barry Marshall Parade, Murdoch WA 6150",
+		image: "/event-assets/idpwd2025/OITQ7413.JPG",
+		excerpt:
+			"We are joining the Fiona Stanley Hospital celebration for International Day of People With Disability. Come and say hello at our stall.",
+		content:
+			"This year we are joining the International Day of People With Disability celebration hosted by Fiona Stanley Hospital, with a stall in the hospital concourse alongside their speaker program.",
+		contentBlocks: [
+			{
+				type: "paragraph" as const,
+				text: "This year's theme is Valued. Included. Leading. The day is a chance to celebrate the contributions of people with disability and to talk about what real inclusion looks like.",
+			},
+			{
+				type: "paragraph" as const,
+				text: "Our team will have a stall in the hospital concourse, so come and say hello, pick up some information about our services, or just have a chat about what support might look like for you or someone you care for.",
+			},
+			{
+				type: "paragraph" as const,
+				text: "The event is free and everyone is welcome. Entry is through the Fiona Stanley Hospital Education Building, and the speaker program runs in the G1 Lecture Theatre.",
+			},
+		],
+		registrationLink: "",
+		gallery: [],
+	},
 	{
 		slug: "international-day-of-people-with-disability",
 		title: "International Day of People With Disability 2024",
