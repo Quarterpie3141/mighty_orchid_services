@@ -42,36 +42,44 @@ export interface EventItem {
 }
 
 export const events: EventItem[] = [
-		{
+	{
 		slug: "idpwd-2026",
 		title: "International Day of People With Disability 2026",
 		seoTitle:
 			"International Day of People With Disability 2026 — Mighty Orchid Services",
 		seoDescription:
-			"Come and see us at the Fiona Stanley Hospital IDPwD celebration on 3 December 2026. Free event, everyone welcome.",
+			"Join us at Fiona Stanley Hospital on 3 December 2026, in person or online. Free event, everyone welcome.",
 		date: "2026-12-03",
+		time: "10:00 AM – 2:00 PM",
 		location:
-			"Fiona Stanley Hospital, 14 Barry Marshall Parade, Murdoch WA 6150",
-		image: "/event-assets/idpwd2025/OITQ7413.JPG",
+			"Fiona Stanley Hospital, 11 Robin Warren Drive, Murdoch WA 6150",
+		image: "/event-assets/idpwd2026/idpwd-2026.jpg",
 		excerpt:
-			"We are joining the Fiona Stanley Hospital celebration for International Day of People With Disability. Come and say hello at our stall.",
+			"Join us for a celebration of our community. Free event, in person at Fiona Stanley Hospital or online.",
 		content:
-			"This year we are joining the International Day of People With Disability celebration hosted by Fiona Stanley Hospital, with a stall in the hospital concourse alongside their speaker program.",
+			"We are joining the International Day of People With Disability celebration at Fiona Stanley Hospital, with a stall alongside the speaker program.",
 		contentBlocks: [
 			{
 				type: "paragraph" as const,
-				text: "This year's theme is Valued. Included. Leading. The day is a chance to celebrate the contributions of people with disability and to talk about what real inclusion looks like.",
+				text: "This year's theme is Valued. Included. Leading. The day celebrates the contributions of people with disability and asks what real inclusion looks like.",
 			},
 			{
 				type: "paragraph" as const,
-				text: "Our team will have a stall in the hospital concourse, so come and say hello, pick up some information about our services, or just have a chat about what support might look like for you or someone you care for.",
+				text: "Come and say hello at our stall, pick up information about our services, or just have a chat about what support might look like for you or someone you care for.",
 			},
 			{
 				type: "paragraph" as const,
-				text: "The event is free and everyone is welcome. Entry is through the Fiona Stanley Hospital Education Building, and the speaker program runs in the G1 Lecture Theatre.",
+				text: "The event is free and everyone is welcome. You can join us in person at Fiona Stanley Hospital or online via Microsoft Teams. The venue is wheelchair accessible, with accessible parking and toilets.",
+			},
+			{
+				type: "image" as const,
+				src: "/event-assets/idpwd2026/idpwd-2026-flyer.jpg",
+				alt: "International Day of People with Disability 2026. Thursday 3 December, 10am to 2pm, Fiona Stanley Hospital, 11 Robin Warren Drive, Murdoch. Free event, join in person or online via Microsoft Teams.",
+				caption: "Download or share our event flyer",
+				fullWidth: false,
 			},
 		],
-		registrationLink: "",
+		registrationLink: "https://events.humanitix.com/idpwd26",
 		gallery: [],
 	},
 	{
