@@ -61,7 +61,7 @@ export const events: EventItem[] = [
 		contentBlocks: [
 			{
 				type: "paragraph" as const,
-				text: "This year's theme is Valued. Included. Leading. The day celebrates the contributions of people with disability and asks what real inclusion looks like.",
+				text: "This year's theme is The CRPD at 20: Building on Progress, Advancing the Future. The day celebrates the contributions of people with disability and asks what real inclusion looks like.",
 			},
 			{
 				type: "paragraph" as const,
