@@ -12,3 +12,4 @@ export { default as CollaboratingWith } from "./CollaboratingWith";
 export { default as Awards } from "./Awards";
 export { default as VideoFeature } from "./VideoFeature";
 export { default as CollectionNotice } from "./CollectionNotice";
+export { default as Reveal } from "./Reveal";
