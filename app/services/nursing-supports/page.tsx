@@ -6,7 +6,7 @@ export const metadata = {
 		absolute: "NDIS Nursing Supports | Mighty Orchid Services",
 	},
 	description:
-		"Registered Nurse-led delegation and supervision of care for NDIS participants: assessments, support plans, and training for support workers.",
+		"Registered Nurse-led nursing supports for NDIS participants in the Pilbara: complex bowel care, PEG feeding, tracheostomy, catheters, stoma and wound care, delivered directly or through delegation and supervision.",
 };
 
 export default function NursingSupportsPage() {
@@ -32,8 +32,9 @@ export default function NursingSupportsPage() {
 								Nursing Supports
 							</h1>
 							<p className="mt-5 text-lg md:text-xl text-coolGray-600">
-								Registered Nurse-led support, so your support workers can safely
-								help with your health-related care at home and in the community.
+								Registered Nurse-led clinical care at home and in the community.
+								Our nurse can carry out your health supports directly, or train
+								and supervise your support workers to do it safely.
 							</p>
 							<div className="mt-8 flex flex-wrap gap-4">
 								<a
@@ -76,8 +77,14 @@ export default function NursingSupportsPage() {
 							Registered for Community Nursing Care
 						</h2>
 						<p className="mt-3 text-coolGray-700 leading-relaxed">
-							Mighty Orchid Services is registered with the NDIS Commission to
-							provide community nursing care for people with high support needs.
+							Mighty Orchid Services is a registered NDIS provider, compliant
+							with the NDIS Practice Standards, for Community Nursing Care
+							(0114) and High Intensity Daily Personal Activities (0104).
+						</p>
+						<p className="mt-3 text-coolGray-700 leading-relaxed">
+							Our Registered Nurse works within the Nursing and Midwifery Board
+							of Australia (NMBA) frameworks, and we support Agency-Managed,
+							Plan-Managed and Self-Managed participants.
 						</p>
 					</div>
 				</div>
@@ -192,53 +199,92 @@ export default function NursingSupportsPage() {
 						Health supports we can help with
 					</h2>
 					<p className="mt-3 text-center text-coolGray-600 max-w-3xl mx-auto">
-						Our Registered Nurse provides delegation and supervision of care
-						across all of these areas.
+						Our Registered Nurse can provide these supports directly, or assess,
+						train and supervise your support workers to provide them safely.
 					</p>
-					<div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div className="mt-8 grid md:grid-cols-2 gap-6">
+						<ServiceGroup
+							title="Delegation, supervision and worker training"
+							intro="We build up the people already around you, so care is safe and consistent."
+							items={[
+								"Clinical delegation of care: formal assessment and safe delegation of specific high-intensity tasks to qualified disability support workers",
+								"Hands-on competency training: practical, participant-specific training and competency sign-off for support workers, family members and informal carers",
+								"Ongoing clinical supervision: scheduled oversight, regular competency reviews and continuous monitoring of support teams",
+								"Care plans and protocols: writing and auditing clear nursing care plans, risk assessments and emergency escalation pathways",
+							]}
+						/>
+						<ServiceGroup
+							title="High intensity daily personal activities"
+							intro="Complex, high-risk clinical needs, managed by our Registered Nurse or through delegated supervision."
+							items={[
+								"Complex bowel care: enemas, suppositories, digital stimulation and neurogenic bowel management plans",
+								"Enteral (tube) feeding: PEG, PEJ and nasogastric tube care, pump management, stoma site care and hydration monitoring",
+								"Tracheostomy and ventilator support: routine tracheostomy care, suctioning, tube changes, and invasive and non-invasive ventilation including CPAP and BiPAP",
+								"Epilepsy and seizure management: seizure monitoring, post-ictal support and emergency rescue medication such as midazolam",
+								"Severe dysphagia support: safe mealtime assistance in line with speech pathology plans, to prevent choking and aspiration",
+								"Subcutaneous injections and complex medication: insulin, anticoagulants and high-risk medication oversight",
+								"Recently acquired severe conditions, such as spinal cord injury or acquired brain injury",
+							]}
+						/>
+						<ServiceGroup
+							title="Continence and stoma care"
+							intro="Specialised clinical support that protects comfort, dignity and skin health."
+							items={[
+								"Urinary catheter management: routine changes, insertion, flushing and troubleshooting for indwelling (IDC), suprapubic (SPC) and intermittent catheters",
+								"Stoma and ostomy care: appliance changes, peristomal skin integrity care, and management of colostomies, ileostomies and urostomies",
+								"Continence assessments: full bladder and bowel assessments to support your ongoing NDIS consumables funding",
+							]}
+						/>
+						<ServiceGroup
+							title="Wound, skin and pressure area care"
+							intro="Clinical care to heal wounds and protect skin integrity."
+							items={[
+								"Complex and chronic wound management: assessment, dressing selection and treatment for pressure injuries, ulcers and neuropathic wounds",
+								"Pressure injury prevention: regular skin checks, repositioning schedules, and working with occupational therapists on pressure care equipment",
+								"Post-hospital wound care: ongoing care for surgical or trauma wounds related to your disability",
+								"Foot and lower-limb care: assessment and care planning alongside your podiatrist",
+							]}
+						/>
+						<ServiceGroup
+							title="Chronic condition and diabetes management"
+							intro="Day-to-day health monitoring that picks up problems early."
+							items={[
+								"Diabetes care: blood glucose monitoring, insulin administration, continuous glucose monitor (CGM) oversight, and managing hypos and hypers",
+								"Ongoing health monitoring: regular checks of vital signs and baseline health, to catch issues early and avoid preventable hospital stays",
+							]}
+						/>
+						<ServiceGroup
+							title="Assessments, NDIS reporting and hospital transitions"
+							intro="The clinical evidence and coordination that keeps your plan and your care joined up."
+							items={[
+								"Comprehensive nursing assessments: in-home evaluations to identify disability-related clinical risks and daily support needs",
+								"NDIS plan reassessment reports: clinical evidence and documentation for your planning meetings or change of circumstance requests",
+								"Hospital-to-home transitions: working with hospital discharge teams for a safe return home or into SIL accommodation",
+								"Access to health services: help getting to health and mental health services for people with complex needs",
+							]}
+						/>
+					</div>
+				</div>
+			</section>
+
+			{/* WHY CHOOSE MTOS */}
+			<section className="bg-white">
+				<div className="container mx-auto px-4 pb-16">
+					<h2 className="text-2xl md:text-3xl font-semibold text-coolGray-900 text-center">
+						Why choose Mighty Orchid Services
+					</h2>
+					<div className="mt-8 grid md:grid-cols-3 gap-6">
 						<Area
-							title="Continence supports"
-							desc="Continence and toileting care, catheter management and bowel care."
+							title="Registered quality and safety"
+							desc="A registered NDIS provider, compliant with the NDIS Practice Standards for Community Nursing Care (0114) and High Intensity Daily Personal Activities (0104)."
 						/>
 						<Area
-							title="Wound and pressure care"
-							desc="Complex and slow-to-heal wounds, pressure injury prevention, skin integrity and repositioning."
+							title="We work with your whole team"
+							desc="We partner with your GPs, specialists, allied health therapists, SIL providers and support coordinators, so nothing falls between the gaps."
 						/>
 						<Area
-							title="Dysphagia supports"
-							desc="Eating, drinking and swallowing support, and mealtime management in line with speech pathology plans."
-						/>
-						<Area
-							title="Respiratory supports"
-							desc="Tracheostomy, ventilator and airway management, and breathing support and planning."
-						/>
-						<Area
-							title="Nutrition supports"
-							desc="Enteral feeding and management, such as PEG and nasogastric, with nutrition and hydration planning."
-						/>
-						<Area
-							title="Diabetes management and injections"
-							desc="Blood glucose monitoring, and insulin and other subcutaneous injections under prescriber orders."
-						/>
-						<Area
-							title="Seizure and epilepsy supports"
-							desc="Seizure monitoring and management, and epilepsy management plans."
-						/>
-						<Area
-							title="Podiatry and foot care"
-							desc="Foot, ankle and lower-limb assessment and care planning, alongside podiatry."
-						/>
-						<Area
-							title="Specialist supports"
-							desc="Recently acquired severe conditions, such as spinal cord injury or acquired brain injury."
-						/>
-						<Area
-							title="Access to health services"
-							desc="Help getting to health and mental health services for people with complex needs."
-						/>
-						<Area
-							title="Training for workers and families"
-							desc="Training support workers, family and carers to provide health supports safely."
+							title="Flexible and accessible"
+							desc="Available to Agency-Managed, Plan-Managed and Self-Managed participants across the Pilbara region."
 						/>
 					</div>
 				</div>
@@ -349,6 +395,13 @@ export default function NursingSupportsPage() {
 						Common questions
 					</h2>
 					<div className="mt-8 max-w-3xl mx-auto space-y-6">
+						<Question q="Does your nurse do the care, or only train my support workers?">
+							Both. Our Registered Nurse can carry out clinical care directly,
+							such as catheter changes, wound care or tube feeding. She can also
+							assess a task, write a plan and train your support workers to do
+							it safely, then keep supervising them. Which one suits you depends
+							on your needs, your plan and who is already supporting you.
+						</Question>
 						<Question q="What is delegation and supervision of care?">
 							It is when a Registered Nurse assesses a health-related task,
 							writes a plan, trains support workers to do it safely, and then
@@ -440,6 +493,27 @@ function Area({ title, desc }: { title: string; desc: string }) {
 		<div className="rounded-xl border border-coolGray-200 p-6 shadow-sm bg-white">
 			<h3 className="text-lg font-semibold text-coolGray-900">{title}</h3>
 			<p className="mt-2 text-coolGray-700">{desc}</p>
+		</div>
+	);
+}
+
+function ServiceGroup({
+	title,
+	intro,
+	items,
+}: { title: string; intro: string; items: string[] }) {
+	return (
+		<div className="rounded-xl border border-coolGray-200 p-6 shadow-sm bg-white">
+			<h3 className="text-lg font-semibold text-coolGray-900">{title}</h3>
+			<p className="mt-2 text-coolGray-600">{intro}</p>
+			<ul className="mt-4 space-y-2 text-coolGray-700">
+				{items.map((item) => (
+					<li key={item} className="flex gap-3">
+						<DotIcon />
+						<span>{item}</span>
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }
