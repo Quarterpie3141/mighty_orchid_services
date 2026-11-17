@@ -50,7 +50,7 @@ export const events: EventItem[] = [
 		seoDescription:
 			"Join us at Fiona Stanley Hospital on 3 December 2026, in person or online. Free event, everyone welcome.",
 		date: "2026-12-03",
-		time: "10:00 AM – 2:00 PM",
+		time: "11:15 AM – 2:00 PM",
 		location:
 			"Fiona Stanley Hospital, 11 Robin Warren Drive, Murdoch WA 6150",
 		image: "/event-assets/idpwd2026/idpwd-2026.jpg",
