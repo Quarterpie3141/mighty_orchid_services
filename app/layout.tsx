@@ -11,6 +11,11 @@ const inter = Inter({
 	variable: "--font-inter",
 });
 
+// Google Analytics 4 Measurement ID, from Analytics > Admin > Data streams.
+// It looks like G-ABC123XYZ. Analytics stays switched off while this is empty,
+// and only ever runs on the live site, never in local development.
+const GA_MEASUREMENT_ID: string = "G-DNCTL09XXD";
+
 export const metadata: Metadata = {
 	metadataBase: new URL("https://mtos.com.au"),
 	applicationName: "Mighty Orchid Services (MTOS)",
@@ -250,11 +255,31 @@ export default function RootLayout({
 		],
 	};
 
+	const analyticsEnabled =
+		GA_MEASUREMENT_ID !== "" && process.env.NODE_ENV === "production";
+
 	return (
 		<html lang="en-AU" className={inter.variable}>
 			<body className={`${inter.className} antialiased`}>
 				{children}
 				<AccessibilityControls />
+
+				{/* Google Analytics 4 */}
+				{analyticsEnabled && (
+					<>
+						<Script
+							id="ga4-loader"
+							src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+							strategy="afterInteractive"
+						/>
+						<Script id="ga4-init" strategy="afterInteractive">
+							{`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+						</Script>
+					</>
+				)}
 
 				{/* JSON-LD: Organization */}
 				<Script
