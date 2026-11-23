@@ -6,10 +6,32 @@ export const sendMailFeedback = functions.https.onRequest(
 		corsHandler(request, response, () => {
 			const now = new Date();
 
-			const senderEmail = request.body.email;
-			const message = request.body.message;
-			const phoneNumber = request.body.phone;
-			const name = request.body.name;
+			const senderEmail = request.body?.email;
+			const message = request.body?.message;
+			const phoneNumber = request.body?.phone;
+			const name = request.body?.name;
+			// A submission with no message did not come from our form: the form
+			// requires a message before it will send. Name, email and phone stay
+			// optional, so people can still give feedback anonymously.
+			if (typeof message !== "string" || message.trim() === "") {
+				response.status(400).json({ message: "A message is required." });
+				return;
+			}
+
+			// Anonymous submissions arrive with these fields blank. Show something
+			// readable instead of leaving a gap in the email.
+			const displayName =
+				typeof name === "string" && name.trim() !== ""
+					? name.trim()
+					: "Anonymous";
+			const displayEmail =
+				typeof senderEmail === "string" && senderEmail.trim() !== ""
+					? senderEmail.trim()
+					: "Not provided";
+			const displayPhone =
+				typeof phoneNumber === "string" && phoneNumber.trim() !== ""
+					? phoneNumber.trim()
+					: "Not provided";
 
 			async function send() {
 				try {
@@ -40,7 +62,7 @@ export const sendMailFeedback = functions.https.onRequest(
 										Name: "Recipient",
 									},
 								],
-								Subject: `Feedback from ${name} Submitted ${now.getDate()}/${now.getMonth() + 1}`,
+								Subject: `Feedback from ${displayName} Submitted ${now.getDate()}/${now.getMonth() + 1}`,
 								HTMLPart: `
                             <!DOCTYPE html>
                             <html>
@@ -94,10 +116,10 @@ export const sendMailFeedback = functions.https.onRequest(
                                     </table>              
                                     <div class="content">
                                         <p>Hello,</p>
-                                        <p>You have some Feedback from <strong>${name}</strong>.</p>
+                                        <p>You have some Feedback from <strong>${displayName}</strong>.</p>
                                         <p>
-                                            Contact email: <strong>${senderEmail}</strong><br>
-                                            Phone Number: <strong>${phoneNumber}</strong>
+                                            Contact email: <strong>${displayEmail}</strong><br>
+                                            Phone Number: <strong>${displayPhone}</strong>
                                         </p>
                                         <br>
                                         <p>Message:</p>
