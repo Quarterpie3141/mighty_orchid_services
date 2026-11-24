@@ -48,38 +48,43 @@ export const events: EventItem[] = [
 		seoTitle:
 			"International Day of People With Disability 2026 — Mighty Orchid Services",
 		seoDescription:
-			"Join us at Fiona Stanley Hospital on 3 December 2026, in person or online. Free event, everyone welcome.",
-		date: "2026-12-03",
-		time: "11:15 AM – 2:00 PM",
+			"Join us at Ellersdale Park Clubrooms in Warwick on Friday 4 December 2026, 10am to 2pm. Free community event, everyone welcome.",
+		date: "2026-12-04",
+		time: "10:00 AM – 2:00 PM",
 		location:
-			"Fiona Stanley Hospital, 11 Robin Warren Drive, Murdoch WA 6150",
+			"Ellersdale Park Clubrooms, Main Hall, 50 Ellersdale Avenue, Warwick WA 6024",
 		image: "/event-assets/idpwd2026/idpwd-2026.jpg",
 		excerpt:
-			"Join us for a celebration of our community. Free event, in person at Fiona Stanley Hospital or online.",
+			"Join us for a celebration of our community at Ellersdale Park Clubrooms in Warwick. Free event, drop in any time.",
 		content:
-			"We are joining the International Day of People With Disability celebration at Fiona Stanley Hospital, with a stall alongside the speaker program.",
+			"We are hosting a community celebration for the International Day of People With Disability at Ellersdale Park Clubrooms in Warwick, alongside With Grace Support.",
 		contentBlocks: [
 			{
 				type: "paragraph" as const,
-				text: "This year's theme is The CRPD at 20: Building on Progress, Advancing the Future. The day celebrates the contributions of people with disability and asks what real inclusion looks like.",
+				text: "This year's theme is The CRPD at 20: Building on Progress, Advancing the Future. It marks twenty years since the Convention on the Rights of Persons with Disabilities was adopted. The day celebrates the contributions of people with disability and asks what real inclusion looks like.",
 			},
 			{
 				type: "paragraph" as const,
-				text: "Come and say hello at our stall, pick up information about our services, or just have a chat about what support might look like for you or someone you care for.",
+				text: "Mighty Orchid Services and With Grace Support are hosting this one together. Come along to celebrate our community, meet the local organisations holding stalls, and stay for morning tea. You do not have to book, just drop in any time between 10am and 2pm. If you can let us know you are coming it helps us plan morning tea and make sure the space works for you.",
 			},
 			{
 				type: "paragraph" as const,
-				text: "The event is free and everyone is welcome. You can join us in person at Fiona Stanley Hospital or online via Microsoft Teams. The venue is wheelchair accessible, with accessible parking and toilets.",
+				text: "The event is free and everyone is welcome. The venue is wheelchair accessible, with accessible parking and accessible toilets.",
+			},
+			{
+				type: "paragraph" as const,
+				text: "Are you an organisation interested in holding a stall? Email Tamanna at tamanna@mtos.com.au or call 0404 342 077.",
 			},
 			{
 				type: "image" as const,
 				src: "/event-assets/idpwd2026/idpwd-2026-flyer.jpg",
-				alt: "International Day of People with Disability 2026. Thursday 3 December, 10am to 2pm, Fiona Stanley Hospital, 11 Robin Warren Drive, Murdoch. Free event, join in person or online via Microsoft Teams.",
+				alt: "International Day of People with Disability 2026. Friday 4 December, 10am to 2pm, Ellersdale Park Clubrooms Main Hall, 50 Ellersdale Avenue, Warwick WA 6024. Free event, everyone welcome.",
 				caption: "Download or share our event flyer",
 				fullWidth: false,
 			},
 		],
-		registrationLink: "https://events.humanitix.com/idpwd26",
+		registrationLink:
+			"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=vk7h8-X8LkSKoqhkPX2riFppFvcjLsxKsryfemC9AdVUNDU3TFhDTjdDR1kzTUNVTVRTVUNJUFg3Qi4u",
 		gallery: [],
 	},
 	{
