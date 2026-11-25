@@ -84,7 +84,7 @@ export const events: EventItem[] = [
 			},
 		],
 		registrationLink:
-			"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=vk7h8-X8LkSKoqhkPX2riFppFvcjLsxKsryfemC9AdVUNDU3TFhDTjdDR1kzTUNVTVRTVUNJUFg3Qi4u",
+			"https://allevents.in/joondalup/200031121101829?ref=sharer",
 		gallery: [],
 	},
 	{
